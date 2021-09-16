@@ -1,0 +1,26 @@
+canali sincronizzati:
+    geolocalizzazione, gps
+    > comunicazione vocale
+        push to talk
+        half duplex, uno alla volta
+        broadcast
+    stream video? no
+
+multiple piattaforme, -> solo unity
+    player
+    master
+
+scenario
+    > open world
+        tipo areoporto: senza landmark
+        con landmarks
+            quanti
+            visibilità
+    dopo: labirinto
+
+realismo a volontà
+
+
+
+1. radio push to talk
+2. client fps
