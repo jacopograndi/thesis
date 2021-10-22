@@ -5,6 +5,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{systeme}
+\usepackage{float}
 \graphicspath{ {./diagrams/} }
 
 \begin{document}
@@ -13,6 +14,8 @@
 \begin {center}
 \large Thesis
 \end{center}
+
+\tableofcontents
 
 \section{State of the art}
 \subsection{Similar Games}
@@ -38,52 +41,29 @@ This is the data gathered from testers.
 \clearpage
 
 \section{Technology used}
+
 \subsection{Input and Devices}
-The game will be played using mouse and keyboard. The courier players will only have to use the keyboard.
-\subsection{Kinematic Bycicle Model \cite{kbm}}
-The model is a simplified car steering model, where the front wheels are collapsed into one and likewise the back wheels. The only steering wheel is the front one. \\
+The game will be played using mouse and keyboard. The courier players will only have to use the keyboard after the game phase is started.
 
-\smallskip
-
-\( [x, y] \) is the absolute position of the bycicle in the plane. \\
-\( v \) is the velocity of the bicicle. \\
-\( \psi \) is the heading angle \\
-\( l_r \) is the distance from the center to the rear wheel \\
-\( l_f \) is the distance from the center to the front wheel \\
-\( u_1 \) is the acceleration \\
-\( u_2 \) is the steering angle of the front wheel. \\
-
-
-\begin{equation}\dot{x} = v \cos(\psi + \beta (u_2)) \end{equation}
-\begin{equation}\dot{y} = v \sin(\psi + \beta (u_2)) \end{equation}
-\begin{equation}\dot{v} = u_1 \end{equation}
-\begin{equation}\dot{\psi} = \frac{v} {l_r} \sin(\beta(u_2)) \end{equation}
-
-\smallskip
-
-where \( \beta(u_2) \) is the slip angle given by
-\begin{equation} \beta(u_2) = \arctan (\tan(u_2) \frac{l_r} { l_f + l_r })  \end{equation}
-
-\bigskip
-
-The model is integrated discretely.
-\begin{equation} x_{t+1} = x_t + \dot{x}\Delta t \end{equation}
-\begin{equation} y_{t+1} = y_t + \dot{y}\Delta t \end{equation}
-\begin{equation} {\psi}_{t+1} = {\psi}_t + \dot{\psi}\Delta t\end{equation}
-
-\subsection{UDP Sockets}
+\subsection{UDP Sockets with packet fragmentation}
 The connection is handled using native C\# asynchronous UDP sockets. The packet is formed by an id part and a data part. The id is the name of the player, which is a potential security vulnerability. This can be solved by hashing the player string. There is a further vulnerability, as a player can send any id. This is solved by getting the id string from an external authentication service. This approach decouples the ip address from the player identification, therefore a change in the players ip address does't pose any identification problem. \\
 The data part of the packet is further subdivided into a protocol integer and the actual data. The protocol dictates the structure of the data. \\ 
-This socket infrastructure is used for game packets, audio packets and video packets interchangeably.
+This socket infrastructure is used for gamesyncronization packets, audio packets and video packets interchangeably.
 \subsection{Model View Controller}
+\begin{figure}[h!]
 \includegraphics[width=\textwidth]{game architecture}
+\caption{Game architecture diagram}
+\label{fig:gamearch}
+\end{figure}
+
+\clearpage
+
 \subsection{Optimizations Techniques}
 Culling, LODs, events
 
 \clearpage
 
 \section{Design}
-
 \subsection{Game Design}
 The game is set in a city, with gridstyle roads.
 There are up to 2 couriers, which have to fulfil a list of delivery orders.
@@ -104,11 +84,11 @@ The traffic simulation can be tuned to different levels of complexity.
 \subsubsection{Static}
 The streets are filled with a random amount of immoble cars.
 \subsubsection{Dynamic}
-Every street has a traffic level associated to it. The traffic levels oscillate smoothly, but randomly over time. The cars are immoble, but when they are not seen by any players, the amount of cars in a street is adjusted to be proportional to the traffic level of the street.
+Every street has a traffic level associated to it. The traffic levels oscillate smoothly following a sine wave with randomized period and phase. The cars are immoble, but when they are not seen by any players, the amount of cars in a street is adjusted to be proportional to the traffic level of the street.
 \subsubsection{Agent Based}
 The cars are agents that move thorugh a graph representation of the streets. The cars roam through the city by turning randomly at intersections. The cars respect traffic lights and obstacles on the streets, so that traffic jams happen dynamically.
 
-\subsection{Variations}
+\subsection{Game Variations}
 \subsubsection{Events}
 Throughout the city there are billboards and signs that contain the time and place an event will happen. The event (for example a parade, a festival, the street market, a strike) generates a lot of foot traffic and car traffic in a particular place. The master has no information about these events, so he has to rely on the couriers who will see the billboards and relay the information.
 \subsubsection{Delivery Timers}
@@ -124,17 +104,91 @@ The game's state is split in static state and dynamic state. The static state is
 Every tick, which are a few milliseconds apart, each client sends their position to the server. The server integrates the positions in it's state and computes the next state, which is sent back to the clients.
  This approach has the advatage that it's naturally resilient to packet loss as the whole state is sent each time. Moreover, there is no network lag on the client character.
  The approach however has the disadvantage that it's weak against cheating, as the server trusts the position given by the client. This can be solved by running the simulation on the server to check for anomalies or by running it exclusively on the server, gathering the raw inputs of the clients instead of the position.
-
 \smallskip
+\begin{figure}[H]
 \includegraphics[width=\textwidth]{net architecture}
-
+\caption{Network Architecture diagram}
+\end{figure}
 \smallskip
 The static state is constructed by using the configuration of the lobby. In the lobby of the game, the master has the possibility to change map, set the number of tasks, set the available time and  turn off video feed and geolocalization. The changes are seen by all clients.
 
+\clearpage
+
+\subsection{Kinematic Bycicle Model \cite{kbm}}
+The model is a simplified car steering model, where the front and back wheels are collapsed into one front wheel and one back wheel. The only steering wheel is the front one. \\
+\smallskip
+Known constants:
+\begin{center}
+\( l_r \) = distance from the center to the rear wheel \\
+\( l_f \) = distance from the center to the front wheel \\
+\end{center}
+State variables:
+\begin{center}
+\( [x, y] \) = absolute position of the bycicle in the plane. \\
+\( v \) = velocity of the bicicle. \\
+\( \psi \) = heading angle \\
+\end{center}
+Control variables:
+\begin{center}
+\( u_1 \) = acceleration \\
+\( u_2 \) = steering angle of the front wheel. \\
+\end{center}
+\begin{figure}[!h]
+\includegraphics[width=\textwidth]{bike}
+\caption{Kinematic bicycle model}
+\end{figure}
+\smallskip
+The model's differential equations:
+\begin{equation}\dot{x} = v \cos(\psi + \beta (u_2)) \end{equation}
+\begin{equation}\dot{y} = v \sin(\psi + \beta (u_2)) \end{equation}
+\begin{equation}\dot{v} = u_1 \end{equation}
+\begin{equation}\dot{\psi} = \frac{v} {l_r} \sin(\beta(u_2)) \end{equation}
+\medskip
+where \( \beta(u_2) \) is the slip angle given by
+\begin{equation} \beta(u_2) = \arctan (\tan(u_2) \frac{l_r} { l_f + l_r })  \end{equation}
+\bigskip
+The model is integrated discretely.
+\begin{equation} x_{t+1} = x_t + \dot{x}\Delta t \end{equation}
+\begin{equation} y_{t+1} = y_t + \dot{y}\Delta t \end{equation}
+\begin{equation} {\psi}_{t+1} = {\psi}_t + \dot{\psi}\Delta t\end{equation}
+
+\clearpage
+
 \subsection{Radio}
-The radio in the game is a simulation of a real half-duplex radio. This means that only one player at the time may speak. This is enforced by transmitting white noise while two ore more player are using the radio channel.
+The radio in the game is a simulation of a real half-duplex radio. This means that only one player at the time may speak. This is enforced by transmitting white noise while two ore more player are using the radio channel simultaneously. The simulation relies on a server based network to centralize the audio mixing process. All clients send their audio to the server, which mixes all the sources and sends customized mixes to each client and the local speaker. As a convention, all audio passing though the mixer has a sampling rate of 48kHz. 
+\subsubsection{Voice Loopback}
+The client audio doesn't loop back to the sender. When the voice returns to the speaker it's delayed, causing confusion. The server processes all audio sources to calculate if noise is needed, then for every client it mixes all sources except the client one.
+\subsubsection{Buffers}
+The client audio is sent to the server and cached in a buffer in order to account for desyncronizations and network jitters. The server creates and fills a buffer for every client. Periodically, the server polls the buffers and mixes the polled data. The mix is sent to each client where it is cached in a buffer. This buffer is constantly polled by an Unity audio callback. The draining and filling of the buffers is balanced: the microphones produce as many samples as the ones consumed by the speakers, so the intermediate buffers serve as a transfer node. 
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{audio mixer}
+\caption{Audio pipeline diagram, the boxes represent the buffers.}
+\end{figure}
+Every buffers delays the signal by a set amount. This delay is crucial to alleviate the network variance, which otherwise would cut the signal and override samples. The buffers, when queried to read a certain amount of data, return silence if the data available is less than the requested amount. This ensures that the mixer will always have either a full set of data or silence and that the buffers will not cut the audio.
+
+\clearpage
+
+\subsubsection{Sampling frequency and Resampling}
+The client's microphone may have a different sampling frequency from each other. The audio sent is resampled to 48 kHz and the audio received is resampled to the speakers sampling frequency. The sampler used is a custom sample and hold algorithm, it inserts or deletes samples following the ratio of sample rates.
+\subsubsection{Noise and Filters \cite{filters}}
+The noise generated and mixed when multiple clients are speaking is white noise at 48 kHz. The audio generated by the clients is filtered by the server with a custom hi pass filter, which attenuates the low frequencies. This effect is done to make the simulation closer to an old style radio.\\
+\begin{figure}[H]
+\includegraphics[width=\textwidth]{hipass}
+\caption{Hi-Pass filter Bode diagram}
+\end{figure}
+\bigskip
+The filter is a recursive digital filter, defined by the following differential equation:
+\begin{equation} y(n) =\alpha (y(n-1) + x(n) - x(n-1))\end{equation}
+
 \subsection{Video}
 The video feed is a frame of the player's camera which is sent to the master by each player. The amount of data required scales rapidly with the resolution of the frame and the frequency of the transmission.
+
+\subsection{Editor Tools}
+The development process was sped up by the construction of tools for Unity. This tools are based on editor scripts, which allows to automatize some actions in the editors such as instantiating prefabs (keeping the prefab link) and destroying GameObjects.
+\subsubsection{Map Generator}
+The map generator places prefabs on a grid, randomizes their z rotation snapping on the 4 cardinal rotations and swaps these prefabs with their updated ones. This script also places road segments ensuring that no segment overlaps another and giving each segment a unique identifier.
+\subsubsection{Graph Generator}
+This tool generates a graph (a nodes and arcs tuple) from the elements present in the scene. The graph is saved directly in the Assets/Resources folder in json format. The graph can be visualized in the scene with a toggle in the script. 
 
 \clearpage
 
