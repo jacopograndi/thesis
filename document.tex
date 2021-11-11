@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{tabularx}
@@ -10,6 +10,17 @@
 \usepackage{url}
 \usepackage{float}
 \graphicspath{ {./diagrams/} {./screens/} {./official/} }
+
+\usepackage{setspace}
+\setstretch{1.25}
+
+\usepackage{afterpage}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{-1}%
+    \newpage}
 
 \begin{document}
 \setlength{\parindent}{0in}
@@ -28,13 +39,13 @@ Dipartimento di Elettronica, Informazione e Bioingegneria \\
 \vspace{0.8cm}
 \includegraphics[width=0.4\textwidth]{poli}
 
-\vspace{3cm}
+\vspace{2cm}
 
 \begin{Large}
-\textbf{Asymmetrical multiplayer videogame}
+\textbf{Fast communication training though asymmetrical multiplayer videogames}
 \end{Large}
 
-\vspace{3cm}
+\vspace{2cm}
 
 \begin{flushleft}
 Relatore:
@@ -55,8 +66,14 @@ Anno Accademico 2020/2021
 
 \clearpage
 
+\afterpage{\blankpage}
+
+\clearpage
+
+\afterpage{\blankpage}
+
 \begin{abstract}
-Games are a powerful tool to improve the player's mental and physical skills. The skills we are interested in training are speed and efficiency of communication, planning and problem solving. They are useful in situations such as a bomb defusal, cave rescues and thick fog navigation, where a team needs remote support to make good decision. We designed and implemented a complete videogame with asymmetrical multiplayer in order to train such skills.
+Games can be a powerful learning tool. For instance typing games and rhythm games are genres defined by the skill they require. These games reward players for improving, pushing the players to play more and better and trying to make the experience as fun as possible. The game we developed is focused in training the communication, planning and problem solving skills of the players. The game puts the players under time pressure and requires a significant amount of information to be exchanged quickly. It also forces a half duplex communication protocol emulating a radio, such that only one player may speak at a time. The courier players will also have to solve space navigation puzzles, obstacle avoidance and local route planning; others will have to make a general plan, assign tasks and deal with multitasking. 
 \end{abstract}
 
 \clearpage
@@ -66,17 +83,24 @@ Games are a powerful tool to improve the player's mental and physical skills. Th
 \clearpage
 
 \section{Introduction}
-\paragraph{Efficent communication and skill development}
-The game is focused in training the communication, planning and problem solving skills of the players. The games puts the players under time pressure and requires a significant amount of information to be exchanged quickly. It also forces a half duplex communication protocol emulating a radio, such that only one player may speak at a time. The courier players will also have to solve space navigation puzzles, obstacle avoidance and local route planning; others will have to make a general plan, assign tasks and deal with multitasking. 
-\paragraph{Keep Talking and Nobody Explodes - Elevator of Doom \cite{ktneelevator}}
-A group of players of Keep Talking and Nobody Explodes completed a challenge called the "Elevator of Doom", which is a exceptionally difficult level. To finish in the 20 minutes time limit, the players spoke quickly in a condensed and clear manner to exchange the puzzles state and the solution. While the players learned how to beat the game, they also developed their communication skills. The level reached by these players is an example of the possibilities offered by the medium.
+Failure is an effective way to learn. Videogames provide an environment where the players can fail more often and reward the players who keep trying and succeed. The environment has a clear goal, such as play the correct notes \cite{rhythm} or type the correct word \cite{typing}, and a clear definition of a mistake with immediate consequences. 
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[height=6cm]{chess}
+\end{center}
+\caption{White played f3, an example of a mistake as Black has Qh4 checkmate.}
+\end{figure}
+
+
+
 \subsection{Applicable scenarios}
-This skills are useful in environments where the team has no way to take decisions based on their local space and has to rely on another team that has the global picture to make decision for them. Examples of scenarios in such enviroments are cave exploration or cave rescues, firefighting operations in thick fog, bomb defusal and warfare operations. 
+Efficient communication is essential in environments where sensible decision have to be taken quickly and the informations obtainable by the local team is insufficient to do so while the remote team can acquire the lacking information. Examples of scenarios in such enviroments are cave exploration or cave rescues, firefighting operations in thick fog, bomb defusal and warfare operations. In each scenario the consequences of failure in communication are catastrophic.
 
 \clearpage
 
 \section{State of the art}
-Asymmetrical games are not rare. The vast majority of games have some element of asymmetry, being the character loadout in the case of Battlefield, the factions in the case of Starcraft or the map in the case of Age of Empires. However, the more a game is asymmetric the harder is to balance and produce. Games with a lot of asymmetry are rare. They need to be implemented multiple times, because every player can act differently.
+Asymmetrical games are not rare. The vast majority of games have some element of asymmetry, being the character loadout in the case of Battlefield, the factions in the case of Starcraft or the map in the case of Age of Empires. However, the more a game is asymmetric the harder is to balance and produce. Games with a lot of asymmetry are rare. 
 
 \subsection{Asymmetrical Multiplayer}
 A game has asymmetrical multiplayer when the players play the game differently. There are multiple levels of asymmetry: from a slight imbalance in the mechanics to a completely separate set of rules. Keep Talking and Nobody Explodes is the most asymmetrical game in the cited games: a player just has a manual. The other two games have a lesser degree of imbalance: in Unrailed the roles and tasks can be exchanged during the games and in amongus every player is controlling a character and interacting in the game's map.
@@ -93,6 +117,9 @@ The game consists in defusing a ticking bomb by solving puzzles attatched to it.
 
 \vspace{0.4cm}
 The manual of the game is overcomplicated and explicitly designed to be convoluted. It contains the solutions to the puzzles, but they are obfuscated. Some players have simplified it and memorized it, so they can play without an assistant. 
+
+\paragraph{Keep Talking and Nobody Explodes - Elevator of Doom \cite{ktneelevator}}
+A group of players of Keep Talking and Nobody Explodes completed a challenge called the "Elevator of Doom", which is a exceptionally difficult level. To finish in the 20 minutes time limit, the players spoke quickly in a condensed and clear manner to exchange the puzzles state and the solution. While the players learned how to beat the game, they also developed their communication skills. The level reached by these players is an example of the possibilities offered by the medium.
 
 \clearpage
 
@@ -472,6 +499,8 @@ Clumsy is a program that makes the internet network worse. It simulates packet l
 \section{Conclusion}
 \paragraph{Feedback}
 \paragraph{Further development}
+
+\afterpage{\blankpage}
 
 \clearpage
 
