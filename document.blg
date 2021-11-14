@@ -1,0 +1,76 @@
+This is BibTeX, Version 0.99d (TeX Live 2021/Arch Linux)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: document.aux
+The style file: plain.bst
+Database file #1: references.bib
+Warning--entry type for "clumsy" isn't style-file defined
+--line 26 of file references.bib
+Warning--entry type for "hlapi" isn't style-file defined
+--line 38 of file references.bib
+Warning--entry type for "bezier" isn't style-file defined
+--line 43 of file references.bib
+Warning--entry type for "unrailed" isn't style-file defined
+--line 48 of file references.bib
+Warning--entry type for "mbt" isn't style-file defined
+--line 53 of file references.bib
+Warning--entry type for "ktne" isn't style-file defined
+--line 58 of file references.bib
+Warning--entry type for "ktneelevator" isn't style-file defined
+--line 63 of file references.bib
+Warning--entry type for "typing" isn't style-file defined
+--line 68 of file references.bib
+Warning--entry type for "rhythm" isn't style-file defined
+--line 73 of file references.bib
+Warning--to sort, need author or key in hlapi
+Warning--to sort, need author or key in clumsy
+Warning--to sort, need author or key in rhythm
+Warning--to sort, need author or key in typing
+Warning--to sort, need author or key in ktne
+Warning--to sort, need author or key in ktneelevator
+Warning--to sort, need author or key in unrailed
+Warning--to sort, need author or key in mbt
+Warning--to sort, need author or key in bezier
+Warning--empty booktitle in kbm
+Warning--empty publisher in try
+You've used 16 entries,
+            2118 wiz_defined-function locations,
+            563 strings with 5823 characters,
+and the built_in function-call counts, 3468 in all, are:
+= -- 310
+> -- 107
+< -- 1
++ -- 49
+- -- 32
+* -- 168
+:= -- 498
+add.period$ -- 39
+call.type$ -- 16
+change.case$ -- 60
+chr.to.int$ -- 0
+cite$ -- 27
+duplicate$ -- 154
+empty$ -- 376
+format.name$ -- 32
+if$ -- 781
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 11
+newline$ -- 74
+num.names$ -- 14
+pop$ -- 155
+preamble$ -- 1
+purify$ -- 48
+quote$ -- 0
+skip$ -- 112
+stack$ -- 0
+substring$ -- 124
+swap$ -- 25
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 56
+warning$ -- 11
+while$ -- 17
+width$ -- 18
+write$ -- 135
+(There were 20 warnings)

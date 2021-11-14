@@ -22,6 +22,12 @@
     \addtocounter{page}{-1}%
     \newpage}
 
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstdefinestyle{sharpc}{language=[Sharp]C, frame=lr, rulecolor=\color{blue!80!black}}
+
+
 \begin{document}
 \setlength{\parindent}{0in}
 
@@ -83,31 +89,32 @@ Games can be a powerful learning tool. For instance typing games and rhythm game
 \clearpage
 
 \section{Introduction}
-Failure is an effective way to learn. Videogames provide an environment where the players can fail more often and reward the players who keep trying and succeed. The environment has a clear goal, such as play the correct notes \cite{rhythm} or type the correct word \cite{typing}, and a clear definition of a mistake with immediate consequences. 
+Failure is an effective way to learn. This is the trial and error approach to problem solving: keep trying until a success or stop trying \cite{try}. Videogames provide an environment where the players can fail more often and reward the players who keep trying and succeed. The environment has a clear goal, such as play the correct notes \cite{rhythm} or type the correct word \cite{typing}, and a clear definition of a mistake with immediate consequences. 
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[height=6cm]{chess}
+\includegraphics[height=7cm]{chess}
 \end{center}
-\caption{White played f3, an example of a mistake as Black has Qh4 checkmate.}
+\caption{White played f3, a mistake as Black has Qh4 checkmate.}
 \end{figure}
 
-
+\paragraph{Serious games}
+Videogames have been subject of study in educational research and are starting to be used by schools. For instance, Minecraft \cite{minecraft} has an educational edition with the purpose of being a platform for learning chemistry, coding and being a virtual classroom. A serious game can be defined as "Any piece of software that merges a non-entertaining purpose (serious) with a video game structure (game)" \cite{serious}. Serious games thus represent a larger set of games than educational games. Skill training games are serious games. The game we developed is designed to be a serious game, merging the fun of playing a videogame to the tedious learning task. The long streaks of failures are mitigated by the act of playing.
 
 \subsection{Applicable scenarios}
 Efficient communication is essential in environments where sensible decision have to be taken quickly and the informations obtainable by the local team is insufficient to do so while the remote team can acquire the lacking information. Examples of scenarios in such enviroments are cave exploration or cave rescues, firefighting operations in thick fog, bomb defusal and warfare operations. In each scenario the consequences of failure in communication are catastrophic.
 
 \clearpage
 
-\section{State of the art}
+\subsection{State of the art}
 Asymmetrical games are not rare. The vast majority of games have some element of asymmetry, being the character loadout in the case of Battlefield, the factions in the case of Starcraft or the map in the case of Age of Empires. However, the more a game is asymmetric the harder is to balance and produce. Games with a lot of asymmetry are rare. 
 
-\subsection{Asymmetrical Multiplayer}
+\subsubsection{Asymmetrical Multiplayer}
 A game has asymmetrical multiplayer when the players play the game differently. There are multiple levels of asymmetry: from a slight imbalance in the mechanics to a completely separate set of rules. Keep Talking and Nobody Explodes is the most asymmetrical game in the cited games: a player just has a manual. The other two games have a lesser degree of imbalance: in Unrailed the roles and tasks can be exchanged during the games and in amongus every player is controlling a character and interacting in the game's map.
 
-\subsection{Similar Games}
+\subsubsection{Similar Games}
 \paragraph{Keep Talking and Nobody Explodes} \cite{ktne}
-The game consists in defusing a ticking bomb by solving puzzles attatched to it. It's a two player game, one player is the defuser and the other has a bomb-defusal manual. The players have to exchange the puzzle state and solutions. 
+The game consists in defusing a ticking bomb by solving puzzles attatched to it. It's a two player game, one player is the defuser and the other has a bomb-defusal manual. The players have to exchange the puzzle state and solutions. This game fits the serious game definition. The primary purpose of the game is to entertain, but to be entertained the game requires certain skills by the players. 
 
 \vspace{0.4cm}
 \frame{\includegraphics[width=\textwidth]{keep_talking_game}}
@@ -124,7 +131,7 @@ A group of players of Keep Talking and Nobody Explodes completed a challenge cal
 \clearpage
 
 \paragraph{Unrailed} \cite{unrailed}
-The game consists in constructing a railway in front of a moving train. If the trains runs out of track, the game is over. In order to construct rails, the players have to chop trees, mine stone and combine materials in a specialized train cart. It's a 2 to 4 player game. The players  usually talk to split tasks among themselves and get time-sensitive tasks done quickly.
+The game consists in constructing a railway in front of a moving train. If the trains runs out of track, the game is over. In order to construct rails, the players have to chop trees, mine stone and combine materials in a specialized train cart. It's a 2 to 4 player game. The players  usually talk to split tasks among themselves and get time-sensitive tasks done quickly. This game is less of a serious game and is far more geared towards entertainment value: the puropose of the game isn't to learn external knowledge. However, players can use this game as a tool to improve their coordination, communication and reflexes.
 
 \vspace{0.4cm}
 \frame{\includegraphics[width=\textwidth]{unrailed}}
@@ -137,17 +144,17 @@ The game includes pickups, scattered in the map and difficult to get. This picku
 
 \clearpage
 
-\paragraph{Among Us} \cite{amongus}
-This game is a mafia game between two teams, impostors and crewmates, which has become recently popular. A team wins if the other team is dead, crewmates also win when they complete all tasks. Impostors have to kill crewmates. If a crewmate finds a corpse, he may call a vote. The player who has to most votes is killed. The players have to discuss who to kill in a limited time.
+\paragraph{More Brain Training} \cite{mbt}
+The game is a collection of puzzles that rate the player's mental skills. The game score is the mental age of the corrisponding average individual. The game is a serious game by design, it's purpose is to keep the player's mind sharp.
 
 \vspace{0.4cm}
-\frame{\includegraphics[width=\textwidth]{amongus}}
-
+\frame{\includegraphics[width=\textwidth]{brain2}}
 \vspace{0.4cm}
-A player once a game can call an emergency meeting, which triggers the vote without the need to report a corpse. The discussion has to be concise, as there is limited time to convince the other players that they are innocent or accuse another player.
+
+This game can be categorized as an exergame, term which is usually used for physical activity, for the mental activity. However, the puzzles in the game are singleplayer and no speech is involved. The multiplayer aspect of the game is just the highscores, which can lead to competition which is not realtime. 
 
 \vfill
-\frame{\includegraphics[width=\textwidth]{amongus_meeting}}
+\frame{\includegraphics[width=\textwidth]{brain_age}}
 
 \clearpage
 
@@ -159,7 +166,7 @@ The game is set in a city, with manhattan grid roads.
 \end{figure}
 There are up to 2 couriers, which have to fulfil a list of delivery orders.
 There is a master player who has a map, which shows the courier's positions and the street's traffic status. The master has the order list, the couriers do not.
-The orders consist of a pickup site and dropoff site.
+The orders consist of a pickup site, a dropoff site and an item to be delivered.
 The streets are blocked by many obstacles:
 \begin{itemize}
   \item variable level of traffic makes the street difficult to navigate
@@ -168,7 +175,7 @@ The streets are blocked by many obstacles:
 \end{itemize}
 The master has to plan the route in realtime and relay the path to each courier in the broadcast channel based on the level of traffic.
 The couriers drive following the Master path, they only see the pickup points and if they have picked up an item, the corrisponding dropoff point.
-The game is lost if the players did not complete all tasks within the time limit.
+The game is lost if the players did not complete all tasks within the time limit, they win if they can complete all tasks.
 
 \subsection{Traffic simulation}
 The cars are agents that move thorugh a graph representation of the streets. The cars roam through the city by turning randomly at intersections. The cars respect traffic lights and occasionally will crash so that traffic jams happen dynamically.
@@ -203,17 +210,18 @@ saxophone & 6 & 0.8\\
 \end{center}
 
 \subsection{Master's Information}
-The information that the master has of the players can be reduced in the settings. The master has three channels of information: geolocalization, video feed and audio from the radio. Turning off any of these channels the game becomes significantly harder, except when turning off the radio. The radio is essential for completing the game, so it cannot be switched off. A chatting system may substitute it partially.
+The information that the master has of the players can be reduced in the settings. The master has three channels of information: geolocalization, video feed and audio from the radio. Turning off any of these channels the game becomes significantly harder, except when turning off the radio. The radio is essential for completing the game, so it cannot be switched off. Turning off the video feed and the geolocalization the master has no way of tracking where the players are, so the players have to constantly update the master with their position verbally. This exchange is made difficult by the half duplex radio, which jams if two players speak simultaneously.
 
 \clearpage
 
 \subsection{Interface design and menus}
-The interface has been prototyped directly in Unity. The game is divided in the main menu and the game scenes. 
+The interface has been prototyped directly in Unity. The game is divided in the main menu and the game scenes. The interface is simple and intuitive, only the essential features to connect and play are present. 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{splash}
 \caption{The main submenu}
 \end{figure}
 In the main submenu the player can choose a name and navigate to the lobby, settings and join submenu. \footnote{Bycicle model from Tidominer, \url{https://sketchfab.com/tidominer}}
+
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{settings}
 \caption{The settings submenu}
@@ -256,26 +264,48 @@ The game maps are constructed by placing blocks, which are made of multiple buil
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{map_village}
-\caption{Game map: Village. This map is the smallest and has the most bridges}
+\caption{Game map: Village. This map is the smallest and has the most bridges, the map is sunny and with a lot of ambient light.}
 \end{figure}
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{map_city}
-\caption{Game map: City}
+\caption{Game map: City. This map is the largest and the most taxing performance-wise. The map is set at night with a lot of traffic lights and bright billboards lighting baked in.}
 \end{figure}
 
 \clearpage
 
 \subsection{UDP Sockets with fragmentation and optional retransmission}
-The connection is handled using native C\# asynchronous UDP sockets. The message is sent with a protocol number, a serial identifier that identifies the packet and an id string that identifies the sender. 
+The connection is handled using native C\# asynchronous UDP sockets. The network can send a message arbitrarily large (It will be fragmented into smaller packets). This system substitutes the deprecated Unity HLAPI (Unity Networking High Level API). Every message has a protocol number, which is used as a multiplexer allowing differently formatted messages to be sent along the same channel. The protocol is as follows:
+
+
+	\lstset{style=sharpc}
+	\begin{lstlisting}
+public enum Protocol {
+	normal, kill, ack,
+	joinreq = 100, syncconf, start, 
+	masterstate=1000, startgame, ready, 
+	clientstate, over, 
+	videoframe, 
+	mastercars,
+        radio=10000
+}
+\end{lstlisting}
+
+
+If a kill is received, the network is shutted down. This functionality is used internally to exit from the networking callback cycle. Ack is used to send back a receive confirmation. The joinreq, syncconf and start protocol numbers are used by the lobby controller. The masterstate, startgame, ready, clientstate and over are used during the game. Mastercars is used to syncronize the initial state of the cars from the master to the clients. \\
+
+\clearpage
+
+\paragraph{Fragmentation}
+If the message is longer than 1024 bytes, it's fragmented in parts no longer than 1024. Each part has the protocol, the serial number and the id along with an offset and a size. The offset is what part of the original is sent and the size is the size of the whole message. At the receiving end, the datagrams received are assembled back into the original messages using the serial number, the offset and size. The partial messages are stored in a dictionary indexed by the serial number and are made available externally only when full. If the fragments arrive not in order it isn't a problem as they are assempled based on their offset.
+
 \begin{figure}[H]
 \begin{center}
 \includegraphics[height=8cm]{packet}
 \end{center}
 \caption{Network packet composition}
 \end{figure}
-\paragraph{Fragmentation}
-If the message is longer than 1024 bytes, it's fragmented in parts no longer than 1024. Each part has the protocol, the serial number and the id along with an offset and a size. The offset is what part of the original is sent and the size is the size of the whole message. At the receiving end, the datagrams received are assembled back into the original messages using the serial number, the offset and size. The partial messages are stored in a dictionary indexed by the serial number and are made available externally only when full. If the fragments arrive not in order it isn't a problem as they are assempled based on their offset.
+
 \paragraph{Optional Retransmission}
 If the packet is marked as resend the system will wait for a response (ack) indicating that the packet was received. The system checks periodically if the timeouts of each packet is over. If the ack isn't received and the timeout is over the system will resend the packet with the same serial number.
 
@@ -334,8 +364,10 @@ Unity provides the multiplayer high level API which is a system that offers mess
 \subsubsection{Definition and Assumptions}
 The agents of the simulation, cars, are defined by their position relative to a graph, a velocity and other paramters (random acceleration, random seed). This graph called "rail graph" is derived from the street level graph, which is a graph that defines the layout of the roads. The rail graph gets it's name from the cars behaving more like trains or trams, as they cant deviate from the rail graph edges. The rail graph is constructed by replacing every node of the road graph with an intersection and every edge with lanes. The road graph has a parameter for every edge indicating how many lanes the street has.
 \begin{figure}[H]
-\includegraphics[width=\textwidth]{railgraph}
+\begin{center}
+\includegraphics[height=18.5cm]{railgraph}
 \caption{Rail Graph construction from the Road Graph}
+\end{center}
 \end{figure}
 \bigskip 
  The rail graph is directed and the direction of an edge is the direction of the flow of traffic. At the intersection the rails are connected by bezier curves. The left turn rails are not connected to not allow cars to turn left, as it causes a jam instantly.
@@ -492,13 +524,48 @@ The model of the game is developed using the test driven development technique. 
 \subsection{Integration Testing}
 The integration testing phase is largely done by hand. This is necessary as unity does't have a way to run multiple deployed instances inside a test environment. The testing routine is to deploy an executable and run it parallel to the editor instance. Some components are tested automatically, such as the serialization of the model and the interaction between smaller model components.
 \subsection{Clumsy \cite{clumsy}}
-Clumsy is a program that makes the internet network worse. It simulates packet loss, jitter, latency, bandwith problems, it tampers with packets. This tool is the basis on the game's retransmission algorithm, because it creates the perfect network conditions for testing.
+Clumsy is a program that makes the internet network worse. It simulates packet loss, jitter, high latency, small bandwith, packet tampering. This tool is the basis on the game's retransmission and fragmentation algorithm, because it creates the perfect network conditions for testing. The packet tampering option highlighted the need to implement an integrity check for messages, which is necessary if the application is deployed on the web. If the application is run on a local network, the chances that a packet is tampered is very low.
+
+\subsection{System test and feedback}
+The game as a whole was tested by indipendent testers. The testers rotated roles (courier and master), there was no more than one courier at a time and they were all set in the map "Village". The results are summed up in the following table:
+
+\begin{center}
+\begin{tabular}{ |c|c|c|c||c|c| }
+\hline
+	Time & Tasks & Video feed & GPS & Completed & Time left \\
+\hline
+	3 minutes & 5 & yes & yes & no & 0 \\
+	3 minutes & 4 & yes & yes & no & 0 \\
+	3 minutes & 3 & yes & yes & yes & 26 seconds \\
+	5 minutes & 3 & yes & yes & yes & 131 seconds \\
+	5 minutes & 3 & no & yes & yes & 95 seconds \\
+	5 minutes & 3 & yes & no & yes & 10 seconds \\
+	5 minutes & 3 & no & no & no & 0 \\
+	8 minutes & 3 & no & no & no & 0 \\
+	8 minutes & 3 & no & no & yes & 39 seconds \\
+	8 minutes & 4 & no & no & yes & 154 seconds \\
+	8 minutes & 5 & no & no & yes & 112 seconds \\
+\hline
+\end{tabular}
+\end{center}
+
+The testers started with a simple scenario and little time. They learned how to play (although they pointed out that the game doesn't explain itself properly) and were able to complete the game in under 3 minutes in just 3 tries. The game seems far more difficult when disabling both the video feed and the player's location (GPS). From that moment on, the testers had a much harder time speaking. The master had to rely on the courier telling him were he was otherwise he would have no indication of his position. The testers found the signs of the street names and were starting to learn the map, so they were able to beat the game consistently.
 
 \clearpage
 
 \section{Conclusion}
-\paragraph{Feedback}
-\paragraph{Further development}
+In this work we analyzed the usefulness of videogames as a learning tool. We designed and implemented a multiplayer videogame with an integrated radio that forces a rapid exchange of information between players to win. We developed a substitute for the default Unity Networking system (HLAPI) and a custom serializer that support large messages and is stable over adverse local network condition. We developed a toolchain to easily produce maps from the Unity Editor. We used test driven development to implement the game rules. We designed and implemented a graph conversion algorithm and a parallel traffic simulation. \\
+
+The system tests results show a significant improvement of the player's performance in the game. \\
+
+For what concerns future development we will focus on the following:
+
+\begin{itemize}
+	\item Addition of environmental audio to make the traffic a more effecive obstacle.
+	\item Addition of other obstacles such as railway level passages and pedestrians.
+	\item Improvement of the network system to deal with tampering and be more stable in remote networks.
+	\item Port of the master code in javascript to deploy the master version in a browser. This step has been considered during design and the codebase has been written to make such a port possible.
+\end{itemize}
 
 \afterpage{\blankpage}
 

@@ -1,0 +1,79 @@
+\begin{thebibliography}{10}
+
+\bibitem{bezier}
+Bezier info, an online book on bezier curves.
+\newblock \url{https://pomax.github.io/bezierinfo/l}.
+
+\bibitem{rhythm}
+Clone hero, a free rhythm game.
+\newblock \url{https://clonehero.net/}.
+
+\bibitem{clumsy}
+Clumsy source code.
+\newblock \url{https://github.com/jagt/clumsy}.
+
+\bibitem{ktne}
+Keep talking and nobody explodes.
+\newblock \url{https://keeptalkinggame.com/}.
+
+\bibitem{ktneelevator}
+Keep talking and nobody explodes, the elevator of doom by lthummus.
+\newblock \url{https://www.youtube.com/watch?v=y9zGRy1bl1A}.
+
+\bibitem{mbt}
+More brain training.
+\newblock
+  \url{https://www.nintendo.it/Giochi/Nintendo-Switch/Brain-Training-del-Dr-Kawashima-per-Nintendo-Switch-1656777.html}.
+
+\bibitem{typing}
+Typeracer, an online typing multiplayer videogame.
+\newblock \url{https://play.typeracer.com/}.
+
+\bibitem{hlapi}
+Unity high level api documentation.
+\newblock \url{https://docs.unity3d.com/Manual/UNetUsingHLAPI.html}.
+
+\bibitem{unrailed}
+Unrailed.
+\newblock \url{https://unrailed-game.com/}.
+
+\bibitem{minecraft}
+Omar Alawajee and Jonathan Delafield-Butt.
+\newblock Minecraft in education benefits learning and social engagement.
+\newblock {\em International Journal of Game-Based Learning}, 11:19--56, 10
+  2021.
+
+\bibitem{tdd}
+Kent Beck.
+\newblock {\em Test-Driven Development: By Example}.
+\newblock Addison-Wesley, 2002.
+
+\bibitem{serious}
+Damien Djaouti, Julian Alvarez, and Jean-Pierre Jessel.
+\newblock Classifying serious games: the g/p/s model.
+\newblock {\em Handbook of Research on Improving Learning and Motivation
+  through Educational Games: Multidisciplinary Approaches}, 01 2011.
+
+\bibitem{mvc}
+Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
+\newblock {\em Design Patterns: Elements of Reusable Object-Oriented Software}.
+\newblock Addison-Wesley Professional, 1994.
+
+\bibitem{kbm}
+Philip Polack, Florent Altché, Brigitte Novel, and Arnaud de~La~Fortelle.
+\newblock The kinematic bicycle model: A consistent model for planning feasible
+  trajectories for autonomous vehicles?
+\newblock pages 812--818, 06 2017.
+
+\bibitem{filters}
+Julius~O. Smith.
+\newblock {\em Introduction to Digital Filters with Audio Applications}.
+\newblock W3K Publishing, 2007.
+
+\bibitem{try}
+Campbell~Donald T.
+\newblock {\em Blind variation and selective retention in creative thought as
+  in other knowledge processes}.
+\newblock 1960.
+
+\end{thebibliography}
