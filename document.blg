@@ -21,10 +21,18 @@ Warning--entry type for "typing" isn't style-file defined
 --line 68 of file references.bib
 Warning--entry type for "rhythm" isn't style-file defined
 --line 73 of file references.bib
+Warning--entry type for "counterstrike" isn't style-file defined
+--line 116 of file references.bib
+Warning--entry type for "faf" isn't style-file defined
+--line 121 of file references.bib
+Warning--I didn't find a database entry for "Halo"
+Warning--I didn't find a database entry for "starcraft"
 Warning--to sort, need author or key in hlapi
 Warning--to sort, need author or key in clumsy
 Warning--to sort, need author or key in rhythm
 Warning--to sort, need author or key in typing
+Warning--to sort, need author or key in counterstrike
+Warning--to sort, need author or key in faf
 Warning--to sort, need author or key in ktne
 Warning--to sort, need author or key in ktneelevator
 Warning--to sort, need author or key in unrailed
@@ -32,45 +40,45 @@ Warning--to sort, need author or key in mbt
 Warning--to sort, need author or key in bezier
 Warning--empty booktitle in kbm
 Warning--empty publisher in try
-You've used 17 entries,
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            569 strings with 6026 characters,
-and the built_in function-call counts, 3909 in all, are:
-= -- 354
-> -- 120
+            578 strings with 6260 characters,
+and the built_in function-call counts, 4223 in all, are:
+= -- 382
+> -- 122
 < -- 2
-+ -- 54
++ -- 56
 - -- 36
-* -- 191
-:= -- 558
-add.period$ -- 42
-call.type$ -- 17
-change.case$ -- 65
+* -- 201
+:= -- 590
+add.period$ -- 46
+call.type$ -- 19
+change.case$ -- 71
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 177
-empty$ -- 417
+cite$ -- 32
+duplicate$ -- 191
+empty$ -- 463
 format.name$ -- 36
-if$ -- 887
+if$ -- 965
 int.to.chr$ -- 0
-int.to.str$ -- 17
+int.to.str$ -- 19
 missing$ -- 12
-newline$ -- 79
+newline$ -- 87
 num.names$ -- 16
-pop$ -- 163
+pop$ -- 185
 preamble$ -- 1
-purify$ -- 52
+purify$ -- 56
 quote$ -- 0
-skip$ -- 133
+skip$ -- 145
 stack$ -- 0
-substring$ -- 157
-swap$ -- 36
+substring$ -- 167
+swap$ -- 38
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
-warning$ -- 11
+type$ -- 68
+warning$ -- 13
 while$ -- 21
-width$ -- 19
-write$ -- 146
-(There were 20 warnings)
+width$ -- 21
+write$ -- 160
+(There were 26 warnings)
