@@ -131,7 +131,7 @@ A group of players of Keep Talking and Nobody Explodes completed a challenge cal
 \clearpage
 
 \paragraph{Unrailed} \cite{unrailed}
-The game consists in constructing a railway in front of a moving train. If the trains runs out of track, the game is over. In order to construct rails, the players have to chop trees, mine stone and combine materials in a specialized train cart. It's a 2 to 4 player game. The players  usually talk to split tasks among themselves and get time-sensitive tasks done quickly. This game is less of a serious game and is far more geared towards entertainment value: the puropose of the game isn't to learn external knowledge. However, players can use this game as a tool to improve their coordination, communication and reflexes.
+The game consists in constructing a railway in front of a moving train. If the trains runs out of track, the game is over. In order to construct rails, the players have to chop trees, mine stone and combine materials in a specialized train cart. It's a 2 to 4 player game. The players  usually talk to split tasks among themselves and get time-sensitive tasks done quickly. This game is less of a serious game and is far more geared towards entertainment value: the purpose of the game isn't to learn external knowledge. However, players can use this game as a tool to improve their coordination, communication and reflexes.
 
 \vspace{0.4cm}
 \frame{\includegraphics[width=\textwidth]{unrailed}}
@@ -178,7 +178,7 @@ The couriers drive following the Master path, they only see the pickup points an
 The game is lost if the players did not complete all tasks within the time limit, they win if they can complete all tasks.
 
 \subsection{Traffic simulation}
-The cars are agents that move thorugh a graph representation of the streets. The cars roam through the city by turning randomly at intersections. The cars respect traffic lights and occasionally will crash so that traffic jams happen dynamically.
+The cars are agents that move through a graph representation of the streets. The cars roam through the city by turning randomly at intersections. The cars respect traffic lights and occasionally will crash so that traffic jams happen dynamically.
 
 \subsection{Items}
 The items to be delivered are named and have two attributes: lives and weight. When the player has an item and crashes into a wall, the item is damaged. If the item is too damaged, the task is failed and the item reverted to the start. The weight of an item slows the player down by applying an acceleration penalty and a max speed penalty. The weight is not displayed in the game but it's effect are apparent to the couriers.
@@ -188,7 +188,7 @@ The items to be delivered are named and have two attributes: lives and weight. W
 \begin{center}
 \begin{tabular}{ |c|c|c| } 
  \hline
- Name & Lives & Weigth \\ 
+ Name & Lives & Weight \\ 
 \hline
 water bottle & 10 & 0.9\\
 atomic bomb & 4 & 0.3\\
@@ -203,7 +203,7 @@ chandelier & 3 & 0.4\\
 bowling ball & 15 & 0.1\\
 candy & 8 & 1\\
 pretzel & 10 & 1\\
-bycicle & 12 & 0.4\\
+bicycle & 12 & 0.4\\
 saxophone & 6 & 0.8\\
  \hline
 \end{tabular}
@@ -220,7 +220,7 @@ The interface has been prototyped directly in Unity. The game is divided in the 
 \includegraphics[width=\textwidth]{splash}
 \caption{The main submenu}
 \end{figure}
-In the main submenu the player can choose a name and navigate to the lobby, settings and join submenu. \footnote{Bycicle model from Tidominer, \url{https://sketchfab.com/tidominer}}
+In the main submenu the player can choose a name and navigate to the lobby, settings and join submenu. \footnote{Bicycle model from Tidominer, \url{https://sketchfab.com/tidominer}}
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{settings}
@@ -358,14 +358,14 @@ When the server receives a late packet, it reverts the game state to the time it
 The extrapolation used in the game involves only the remote players position in the client view. The position is modified by the speed of the players based on how much time has passed since the last packet and the last speed known is kept constant.
 
 \subsubsection{Advantages over HLAPI \cite{hlapi}}
-Unity provides the multiplayer high level API which is a system that offers messages, serialization, state synchronization and network classes. HLAPI is deprecated and highly integrated in Unity, which is not desireable as it makes it very difficult to decouple the state of the game from Unity.
+Unity provides the multiplayer high level API which is a system that offers messages, serialization, state synchronization and network classes. HLAPI is deprecated and highly integrated in Unity, which is not desirable as it makes it very difficult to decouple the state of the game from Unity.
 
 \clearpage
 
 \subsection{Agent Based Traffic Simulation}
 
 \subsubsection{Definition and Assumptions}
-The agents of the simulation, cars, are defined by their position relative to a graph, a velocity and other paramters (random acceleration, random seed). This graph called "rail graph" is derived from the street level graph, which is a graph that defines the layout of the roads. The rail graph gets it's name from the cars behaving more like trains or trams, as they cant deviate from the rail graph edges. The rail graph is constructed by replacing every node of the road graph with an intersection and every edge with lanes. The road graph has a parameter for every edge indicating how many lanes the street has.
+The agents of the simulation, cars, are defined by their position relative to a graph, a velocity and other paramters (random acceleration, random seed). This graph called "rail graph" is derived from the street level graph, which is a graph that defines the layout of the roads. The rail graph gets it's name from the cars behaving more like trains or trams, as they can't deviate from the rail graph edges. The rail graph is constructed by replacing every node of the road graph with an intersection and every edge with lanes. The road graph has a parameter for every edge indicating how many lanes the street has.
 \begin{figure}[H]
 \begin{center}
 \includegraphics[height=18.5cm]{railgraph}
@@ -425,7 +425,7 @@ The traffic simulation is synchronized by passing the current step of the master
 
 \clearpage
 
-\subsection{Kinematic Bycicle Model \cite{kbm}}
+\subsection{Kinematic Bicycle Model \cite{kbm}}
 The model is a simplified car steering model, where the front and back wheels are collapsed into one front wheel and one back wheel. The only steering wheel is the front one. \\
 \smallskip
 Known constants:
@@ -435,8 +435,8 @@ Known constants:
 \end{center}
 State variables:
 \begin{center}
-\( [x, y] \) = absolute position of the bycicle in the plane. \\
-\( v \) = velocity of the bicicle. \\
+\( [x, y] \) = absolute position of the bicycle in the plane. \\
+\( v \) = velocity of the bicycle. \\
 \( \psi \) = heading angle \\
 \end{center}
 Control variables:
