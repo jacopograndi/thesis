@@ -1,26 +1,27 @@
 \contentsline {section}{\numberline {1}Introduction}{4}{}%
 \contentsline {paragraph}{Serious games}{4}{}%
+\contentsline {paragraph}{Skill training}{5}{}%
 \contentsline {subsection}{\numberline {1.1}Applicable scenarios}{5}{}%
-\contentsline {subsection}{\numberline {1.2}State of the art}{6}{}%
-\contentsline {subsubsection}{\numberline {1.2.1}Asymmetrical Multiplayer}{6}{}%
-\contentsline {subsubsection}{\numberline {1.2.2}Similar Games}{6}{}%
+\contentsline {subsection}{\numberline {1.2}Asymmetrical multiplayer}{5}{}%
+\contentsline {subsection}{\numberline {1.3}Similar games}{6}{}%
 \contentsline {paragraph}{Keep Talking and Nobody Explodes}{6}{}%
 \contentsline {paragraph}{Keep Talking and Nobody Explodes - Elevator of Doom \cite {ktneelevator}}{8}{}%
 \contentsline {paragraph}{Unrailed}{9}{}%
 \contentsline {paragraph}{More Brain Training}{11}{}%
-\contentsline {section}{\numberline {2}Game Design}{13}{}%
+\contentsline {section}{\numberline {2}Game design}{13}{}%
 \contentsline {subsection}{\numberline {2.1}Traffic simulation}{14}{}%
 \contentsline {subsection}{\numberline {2.2}Items}{14}{}%
 \contentsline {paragraph}{Item table}{14}{}%
-\contentsline {subsection}{\numberline {2.3}Master's Information}{15}{}%
+\contentsline {subsection}{\numberline {2.3}Master's information}{15}{}%
 \contentsline {subsection}{\numberline {2.4}Interface design and menus}{16}{}%
+\contentsline {paragraph}{Radio visualizer}{20}{}%
 \contentsline {section}{\numberline {3}Implementation}{21}{}%
 \contentsline {subsection}{\numberline {3.1}Level design and 3D models}{21}{}%
 \contentsline {subsection}{\numberline {3.2}UDP Sockets with fragmentation, optional retransmission and integrity check}{25}{}%
 \contentsline {paragraph}{Fragmentation}{26}{}%
-\contentsline {paragraph}{Optional Retransmission}{26}{}%
-\contentsline {paragraph}{Integrity Check}{27}{}%
-\contentsline {subsection}{\numberline {3.3}Game Architecture}{28}{}%
+\contentsline {paragraph}{Optional retransmission}{26}{}%
+\contentsline {paragraph}{Integrity check}{27}{}%
+\contentsline {subsection}{\numberline {3.3}Game architecture}{28}{}%
 \contentsline {paragraph}{Model}{28}{}%
 \contentsline {paragraph}{View}{29}{}%
 \contentsline {paragraph}{Controller}{29}{}%
@@ -32,35 +33,35 @@
 \contentsline {paragraph}{Rollback}{31}{}%
 \contentsline {paragraph}{Extrapolation}{32}{}%
 \contentsline {subsubsection}{\numberline {3.4.2}Advantages over HLAPI \cite {hlapi}}{32}{}%
-\contentsline {subsection}{\numberline {3.5}Agent Based Traffic Simulation}{33}{}%
-\contentsline {subsubsection}{\numberline {3.5.1}Definition and Assumptions}{33}{}%
-\contentsline {paragraph}{Traffic Lights}{36}{}%
+\contentsline {subsection}{\numberline {3.5}Agent based traffic simulation}{33}{}%
+\contentsline {subsubsection}{\numberline {3.5.1}Definition and assumptions}{33}{}%
+\contentsline {paragraph}{Traffic lights}{36}{}%
 \contentsline {subsubsection}{\numberline {3.5.2}Implementation}{36}{}%
-\contentsline {paragraph}{Car-Train Agent}{36}{}%
+\contentsline {paragraph}{Car-Train agent}{36}{}%
 \contentsline {paragraph}{Integration}{37}{}%
 \contentsline {subsubsection}{\numberline {3.5.3}Optimization}{37}{}%
-\contentsline {paragraph}{Collision Detection: Lookahead dictionary}{37}{}%
+\contentsline {paragraph}{Collision detection: lookahead dictionary}{37}{}%
 \contentsline {paragraph}{Lookup optimization and caching}{38}{}%
 \contentsline {paragraph}{Intersection optimization: Grid indexing}{38}{}%
-\contentsline {paragraph}{Parallel Integration}{38}{}%
+\contentsline {paragraph}{Parallel integration}{38}{}%
 \contentsline {paragraph}{Stopped cars linking}{39}{}%
-\contentsline {subsubsection}{\numberline {3.5.4}Traffic Synchronization}{39}{}%
-\contentsline {subsection}{\numberline {3.6}Kinematic Bycicle Model \cite {kbm}}{40}{}%
+\contentsline {subsubsection}{\numberline {3.5.4}Traffic synchronization}{39}{}%
+\contentsline {subsection}{\numberline {3.6}Kinematic bycicle model \cite {kbm}}{40}{}%
 \contentsline {subsubsection}{\numberline {3.6.1}Player movement}{42}{}%
 \contentsline {subsection}{\numberline {3.7}Radio}{43}{}%
-\contentsline {paragraph}{Voice Loopback}{43}{}%
+\contentsline {paragraph}{Voice loopback}{43}{}%
 \contentsline {paragraph}{Buffers}{43}{}%
 \contentsline {paragraph}{Buffer delay}{44}{}%
-\contentsline {paragraph}{Sampling frequency and Resampling}{45}{}%
+\contentsline {paragraph}{Sampling frequency and resampling}{45}{}%
 \contentsline {paragraph}{Noise and Filters \cite {filters}}{45}{}%
 \contentsline {subsection}{\numberline {3.8}Video}{46}{}%
-\contentsline {subsection}{\numberline {3.9}Editor Tools}{47}{}%
-\contentsline {paragraph}{Map Generator}{47}{}%
-\contentsline {paragraph}{Graph Generator}{47}{}%
+\contentsline {subsection}{\numberline {3.9}Editor tools}{47}{}%
+\contentsline {paragraph}{Map generator}{47}{}%
+\contentsline {paragraph}{Graph generator}{47}{}%
 \contentsline {section}{\numberline {4}Testing}{48}{}%
-\contentsline {subsection}{\numberline {4.1}Unit Testing}{48}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}Test Driven Development \cite {tdd}}{48}{}%
-\contentsline {subsection}{\numberline {4.2}Integration Testing}{48}{}%
+\contentsline {subsection}{\numberline {4.1}Unit testing}{48}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Test driven development \cite {tdd}}{48}{}%
+\contentsline {subsection}{\numberline {4.2}Integration testing}{48}{}%
 \contentsline {subsection}{\numberline {4.3}Clumsy \cite {clumsy}}{49}{}%
 \contentsline {subsection}{\numberline {4.4}System test and feedback}{49}{}%
 \contentsline {section}{\numberline {5}Conclusion}{51}{}%
