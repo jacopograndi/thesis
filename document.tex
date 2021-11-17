@@ -9,6 +9,7 @@
 \usepackage{caption}
 \usepackage{url}
 \usepackage{float}
+\usepackage{appendix}
 \graphicspath{ {./diagrams/} {./screens/} {./official/} }
 
 \usepackage{setspace}
@@ -241,7 +242,7 @@ The lobby is where the master (which is the host) accepts connections and config
 \includegraphics[width=\textwidth]{master}
 \caption{The master interface}
 \end{figure}
-The master has at his left the task list and the time left in the game. In the bottom right there are the video feeds of the players and an arrow connects the feed to the corresponding player. The arrows which connects the pickup place and the dropoff of a task can be toggled by clicking on the corresponding task in the list. The task status (none, worked on, completed) changes the color of the task in the list.
+The master has at his left the task list and the time left in the game. In the bottom right there are the video feeds of the players and an arrow connects the feed to the corresponding player. The arrows which connects the pickup place and the dropoff of a task can be toggled by clicking on the corresponding task in the list. The task status (none, worked on, completed) changes the color of the task in the list. The master has an instruction panel which can be toggled on and off. The instructions are very brief and are intended to be read by beginners. The master is the only one that has access to instructions.
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{gameplay}
 \caption{The player interface}
@@ -268,7 +269,9 @@ In the top left of every screen (except the main submenu) there is the radio ico
 \includegraphics[width=\textwidth]{blockcargo}
 \caption{Industrial block}
 \end{figure}
-The game maps are constructed by placing blocks, which are made of multiple buildings. Blocks are all contained in a square with a 110m edge. Blocks are assembled using the Everything Library \footnote{Assets from Everything Library © David OReilly, \url{https://www.davidoreilly.com/library}}. The roads are placed between blocks and their width is reflected in the number of lanes. Signs that indicate the names of the roads are generated following the road layout. Traffic lights and cars are generated at runtime. This workflow allows for big maps to be constructed quickly. In the game there are three maps: City, Town and Village. The maps are stored in separate scenes, so changes can be affecting only one map. This allows to have different lighting, decorative objects and gameplay elements.
+The game maps are constructed by placing blocks, which are made of multiple buildings. Blocks are all contained in a square with a 110m edge. Blocks are assembled using the Everything Library \footnote{Assets from Everything Library © David OReilly, \url{https://www.davidoreilly.com/library}}. The blocks are designed by hand focusing on differentiating each side as much as possible from the others so that when they are placed in the map rotated randomly they appear to be unique. The roads are placed between blocks and their width is reflected in the number of lanes, which are then used to place cars at runtime. Signs that indicate the names of the roads are generated following the road layout. Traffic lights and cars are generated at runtime. The bridges are placed in the editor and included in the road layout as special obstacle to track their state. This workflow allows for big maps to be constructed quickly. \\
+\\
+Currently, in the game there are three maps: City, Town and Village. The maps are stored in separate scenes, so changes can be affecting only one map. This allows to have different lighting, decorative objects and gameplay elements. 
 
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{map_village}
@@ -279,6 +282,9 @@ The game maps are constructed by placing blocks, which are made of multiple buil
 \includegraphics[width=\textwidth]{map_city}
 \caption{Game map: City. This map is the largest and the most taxing performance-wise. The map is set at night with a lot of traffic lights and bright billboards lighting baked in.}
 \end{figure}
+
+\paragraph{Bridges}
+The bridges in the maps are moving drawbridges that open and close following a timer. The time it takes for a bridge to open and close is set in the editor along with the maximum angle it reaches when opened and it's size. These bridges are one implementation of a more abstract timed obstacle.
 
 \clearpage
 
@@ -339,10 +345,10 @@ The controller interfaces with the model, the view, the networking and Unity. Th
 \clearpage
 
 \subsection{Synchronization}
-Multiple instances of a game can be synchronized either by passing only the inputs or the whole state.
+Multiple instances of a game can be synchronized either by passing only the inputs or the whole state. This approach assumes that the server simulates the game in parallel with respect to the clients.
 
 \paragraph{Inputs synchronization}
-By passing only the inputs, every instance has to update their simulation based on all inputs gathered before the previous update. As the master doesn't have a full simulation of the game (physics and player movement are only in the clients), this approach is unfeasible.
+By passing only the inputs, every instance has to update their simulation based on all inputs gathered before the previous update. As the server doesn't have a full simulation of the game (physics and player movement are only in the clients), this approach is unfeasible.
 
 \paragraph{State synchronization}
 The master sends the whole dynamic state to the clients. The clients pass the outcome of the inputs in the form of the player position and a flag if the player happens to collide with the enviroment. This approach is unfeasible if the state is too large to be efficiently sent tens of times a second over the network, but in this game's case the dynamic state is small enough.
@@ -365,7 +371,7 @@ When the server receives a late packet, it reverts the game state to the time it
 \paragraph{Extrapolation}
 The extrapolation used in the game involves only the remote players position in the client view. The position is modified by the speed of the players based on how much time has passed since the last packet and the last speed known is kept constant.
 
-\subsubsection{Advantages over HLAPI \cite{hlapi}}
+\subsubsection{HLAPI \cite{hlapi}}
 Unity provides the multiplayer high level API which is a system that offers messages, serialization, state synchronization and network classes. HLAPI is deprecated and highly integrated in Unity, which is not desirable as it makes it very difficult to decouple the state of the game from Unity.
 
 \clearpage
@@ -579,6 +585,36 @@ For what concerns future development we will focus on the following:
 \end{itemize}
 
 \afterpage{\blankpage}
+
+\clearpage
+
+\begin{appendices}
+\section{Quadratic bezier curves}
+A bezier curve is defined by the set of control points. The curve starts at the first control point and ends at the last. The other control points are used to shape the curve and are generally not contained in the curve. \\
+\\
+A linear bezier curve has two control points and is just a linear interpolation between the control points. \\
+A quadratic bezier curve has three control points \begin{math}[ a, b, c ]\end{math} start, control and end. The curve can be defined recursively as an interpolation of interpolations. 
+ 
+\medskip
+
+Let \begin{math}f_1(t) = at + b(1-t)\end{math} and \begin{math}f_2(t) = bt + c(1-t)\end{math} the linear interpolations from a to c and from b to c, \begin{math}0 <= t <= 1\end{math}.
+The bezier curve from a to c is \begin{math}b(t) = f_1(t)t + f_2(t)(1-t)\end{math} \\
+\begin{equation}b(t) = at^2 + 2b(1-t)t + c(1-t)^2\end{equation}
+\\
+The derivative of this function is the velocity vector, which normalized is the direction vector.
+\begin{equation}b'(t) = 2(1-t)(a-b) + 2t(b-c)\end{equation}
+\\
+The lenght of a quadratic bezier is difficult to calculate as it is defined as an integral of the absolute derivative. A simple way to calculate the length is to sample the curve at regularly spaced intervals and sum the lenghts of the segments obtained. This method is fast, but it needs a lot of intervals if the maximum curvature of the curve is large.
+
+\clearpage
+
+\section{Source code}
+The source code of the videogame developed for this thesis and this document are publicly available on Github. \\
+\\
+Code: \url{https://github.com/jacopograndi/radio} \\
+Document: \url{https://github.com/jacopograndi/thesis} \\
+
+\end{appendices}
 
 \clearpage
 
