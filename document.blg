@@ -32,45 +32,45 @@ Warning--to sort, need author or key in mbt
 Warning--to sort, need author or key in bezier
 Warning--empty booktitle in kbm
 Warning--empty publisher in try
-You've used 16 entries,
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            563 strings with 5823 characters,
-and the built_in function-call counts, 3468 in all, are:
-= -- 310
-> -- 107
-< -- 1
-+ -- 49
-- -- 32
-* -- 168
-:= -- 498
-add.period$ -- 39
-call.type$ -- 16
-change.case$ -- 60
+            569 strings with 6026 characters,
+and the built_in function-call counts, 3909 in all, are:
+= -- 354
+> -- 120
+< -- 2
++ -- 54
+- -- 36
+* -- 191
+:= -- 558
+add.period$ -- 42
+call.type$ -- 17
+change.case$ -- 65
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 154
-empty$ -- 376
-format.name$ -- 32
-if$ -- 781
+cite$ -- 28
+duplicate$ -- 177
+empty$ -- 417
+format.name$ -- 36
+if$ -- 887
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 11
-newline$ -- 74
-num.names$ -- 14
-pop$ -- 155
+int.to.str$ -- 17
+missing$ -- 12
+newline$ -- 79
+num.names$ -- 16
+pop$ -- 163
 preamble$ -- 1
-purify$ -- 48
+purify$ -- 52
 quote$ -- 0
-skip$ -- 112
+skip$ -- 133
 stack$ -- 0
-substring$ -- 124
-swap$ -- 25
-text.length$ -- 1
+substring$ -- 157
+swap$ -- 36
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 56
+type$ -- 60
 warning$ -- 11
-while$ -- 17
-width$ -- 18
-write$ -- 135
+while$ -- 21
+width$ -- 19
+write$ -- 146
 (There were 20 warnings)

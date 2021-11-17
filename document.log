@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.10)  14 NOV 2021 23:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.10)  15 NOV 2021 11:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -459,6 +459,10 @@ Package pdftex.def Info: ./screens//map_city.png  used on input line 271.
 (pdftex.def)             Requested size: 390.0pt x 219.41345pt.
  [23 <./screens//map_village.png (PNG copy)>]
 [24 <./screens//map_city.png (PNG copy)>]
+Overfull \hbox (1.69609pt too wide) in paragraph at lines 277--277
+[]\OT1/cmr/bx/n/14.4 UDP Sock-ets with frag-men-ta-tion, op-tional re-trans-
+ []
+
 (/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -478,118 +482,117 @@ Underfull \hbox (badness 10000) in paragraph at lines 295--296
 [25
 
 ]
-<./diagrams//packet.png, id=124, 209.78375pt x 459.7175pt>
+<./diagrams//packet.png, id=124, 208.78pt x 499.8675pt>
 File: ./diagrams//packet.png Graphic file (type png)
 <use ./diagrams//packet.png>
 Package pdftex.def Info: ./diagrams//packet.png  used on input line 304.
-(pdftex.def)             Requested size: 103.87367pt x 227.62204pt.
+(pdftex.def)             Requested size: 95.07149pt x 227.62204pt.
  [26
 
- <./diagrams//packet.png>]
-<./diagrams//game architecture.png, id=129, 563.10374pt x 342.27875pt>
+ <./diagrams//packet.png>] [27]
+<./diagrams//game architecture.png, id=132, 563.10374pt x 342.27875pt>
 File: ./diagrams//game architecture.png Graphic file (type png)
 <use ./diagrams//game architecture.png>
 Package pdftex.def Info: ./diagrams//game architecture.png  used on input line 
-317.
+320.
 (pdftex.def)             Requested size: 390.0pt x 237.06044pt.
- [27
+ [28
 
- <./diagrams//game architecture.png>]
-[28]
-<./diagrams//net architecture.png, id=138, 452.69125pt x 303.1325pt>
+ <./diagrams//game architecture.png>] [29]
+<./diagrams//net architecture.png, id=141, 452.69125pt x 303.1325pt>
 File: ./diagrams//net architecture.png Graphic file (type png)
 <use ./diagrams//net architecture.png>
 Package pdftex.def Info: ./diagrams//net architecture.png  used on input line 3
-40.
+43.
 (pdftex.def)             Requested size: 390.0pt x 261.15141pt.
- [29
+ [30
 
-] [30 <./diagrams//net architecture.png>] [31]
-<./diagrams//railgraph.png, id=149, 573.14125pt x 979.66pt>
+] [31 <./diagrams//net architecture.png>] [32]
+<./diagrams//railgraph.png, id=152, 573.14125pt x 979.66pt>
 File: ./diagrams//railgraph.png Graphic file (type png)
 <use ./diagrams//railgraph.png>
-Package pdftex.def Info: ./diagrams//railgraph.png  used on input line 368.
+Package pdftex.def Info: ./diagrams//railgraph.png  used on input line 371.
 (pdftex.def)             Requested size: 307.96121pt x 526.37598pt.
- [32
+ [33
 
 ]
 Overfull \vbox (15.37596pt too high) has occurred while \output is active []
 
 
-[33 <./diagrams//railgraph.png>]
-<./diagrams//gridlock.png, id=157, 614.295pt x 523.9575pt>
+[34 <./diagrams//railgraph.png>]
+<./diagrams//gridlock.png, id=161, 614.295pt x 523.9575pt>
 File: ./diagrams//gridlock.png Graphic file (type png)
 <use ./diagrams//gridlock.png>
-Package pdftex.def Info: ./diagrams//gridlock.png  used on input line 375.
+Package pdftex.def Info: ./diagrams//gridlock.png  used on input line 378.
 (pdftex.def)             Requested size: 390.0pt x 332.65335pt.
-<./diagrams//semaphore.png, id=158, 491.8375pt x 106.3975pt>
+<./diagrams//semaphore.png, id=162, 491.8375pt x 106.3975pt>
 File: ./diagrams//semaphore.png Graphic file (type png)
 <use ./diagrams//semaphore.png>
-Package pdftex.def Info: ./diagrams//semaphore.png  used on input line 384.
+Package pdftex.def Info: ./diagrams//semaphore.png  used on input line 387.
 (pdftex.def)             Requested size: 390.0pt x 84.37129pt.
- [34 <./diagrams//gridlock.png>]
-<./diagrams//abspos.png, id=164, 430.60875pt x 197.73875pt>
+ [35 <./diagrams//gridlock.png>]
+<./diagrams//abspos.png, id=167, 430.60875pt x 197.73875pt>
 File: ./diagrams//abspos.png Graphic file (type png)
 <use ./diagrams//abspos.png>
-Package pdftex.def Info: ./diagrams//abspos.png  used on input line 394.
+Package pdftex.def Info: ./diagrams//abspos.png  used on input line 397.
 (pdftex.def)             Requested size: 390.0pt x 179.0947pt.
- [35 <./diagrams//semaphore.png>] [36 <./diagrams//abspos.png>] [37] [38]
-<./diagrams//bike.png, id=180, 298.86656pt x 158.09062pt>
+ [36 <./diagrams//semaphore.png>] [37 <./diagrams//abspos.png>] [38] [39]
+<./diagrams//bike.png, id=183, 298.86656pt x 158.09062pt>
 File: ./diagrams//bike.png Graphic file (type png)
 <use ./diagrams//bike.png>
-Package pdftex.def Info: ./diagrams//bike.png  used on input line 445.
+Package pdftex.def Info: ./diagrams//bike.png  used on input line 448.
 (pdftex.def)             Requested size: 390.0pt x 206.3114pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[39
+[40
 
-] [40 <./diagrams//bike.png>] [41
+] [41 <./diagrams//bike.png>] [42
 
 ]
-<./diagrams//audio_mixer.png, id=192, 733.74126pt x 202.7575pt>
+<./diagrams//audio_mixer.png, id=195, 733.74126pt x 202.7575pt>
 File: ./diagrams//audio_mixer.png Graphic file (type png)
 <use ./diagrams//audio_mixer.png>
-Package pdftex.def Info: ./diagrams//audio_mixer.png  used on input line 482.
+Package pdftex.def Info: ./diagrams//audio_mixer.png  used on input line 485.
 (pdftex.def)             Requested size: 390.0pt x 107.77034pt.
- [42
+ [43
 
-] [43 <./diagrams//audio_mixer.png>]
-<./diagrams//hipass.png, id=200, 602.25pt x 295.85532pt>
+] [44 <./diagrams//audio_mixer.png>]
+<./diagrams//hipass.png, id=203, 602.25pt x 295.85532pt>
 File: ./diagrams//hipass.png Graphic file (type png)
 <use ./diagrams//hipass.png>
-Package pdftex.def Info: ./diagrams//hipass.png  used on input line 496.
+Package pdftex.def Info: ./diagrams//hipass.png  used on input line 499.
 (pdftex.def)             Requested size: 390.0pt x 191.59491pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 494--498
+Underfull \hbox (badness 10000) in paragraph at lines 497--501
 
  []
 
-<./diagrams//impulse_response.png, id=201, 462.528pt x 346.896pt>
+<./diagrams//impulse_response.png, id=204, 462.528pt x 346.896pt>
 File: ./diagrams//impulse_response.png Graphic file (type png)
 <use ./diagrams//impulse_response.png>
 Package pdftex.def Info: ./diagrams//impulse_response.png  used on input line 5
-00.
+03.
 (pdftex.def)             Requested size: 390.0pt x 292.5128pt.
-[44
+[45
 
- <./diagrams//hipass.png>] [45 <./diagrams//impulse_response.png>] [46]
-[47
+ <./diagrams//hipass.png>] [46 <./diagrams//impulse_response.png>] [47]
+[48
 
-] [48] [49]
-Underfull \hbox (badness 10000) in paragraph at lines 557--558
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 559--560
+] [49] [50]
+Underfull \hbox (badness 10000) in paragraph at lines 560--561
 
  []
 
-[50
 
-] [50
+Underfull \hbox (badness 10000) in paragraph at lines 562--563
+
+ []
+
+[51
+
+] [51
 
 ] (./document.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 24--27
@@ -607,12 +610,12 @@ Overfull \hbox (8.65271pt too wide) in paragraph at lines 24--27
 tch-[]1656777 .
  []
 
-[51]) [52] (./document.aux) ) 
+[52]) [53] (./document.aux) ) 
 Here is how much of TeX's memory you used:
- 7320 strings out of 478994
- 107058 string characters out of 5864750
- 588417 words of memory out of 5000000
- 24693 multiletter control sequences out of 15000+600000
+ 7321 strings out of 478994
+ 107068 string characters out of 5864750
+ 588472 words of memory out of 5000000
+ 24694 multiletter control sequences out of 15000+600000
  413557 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,8n,88p,853b,1325s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -630,10 +633,10 @@ m/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/tex
 mf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/t
 ype1/public/cm-super/sfrm1200.pfb>
-Output written on document.pdf (56 pages, 6595651 bytes).
+Output written on document.pdf (57 pages, 6602336 bytes).
 PDF statistics:
- 290 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
+ 293 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  151 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -59,6 +59,12 @@ Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
 \newblock {\em Design Patterns: Elements of Reusable Object-Oriented Software}.
 \newblock Addison-Wesley Professional, 1994.
 
+\bibitem{checksum}
+Changli Jiao and L.~Schwiebert.
+\newblock Error masking probability of 1's complement checksums.
+\newblock In {\em Proceedings Tenth International Conference on Computer
+  Communications and Networks (Cat. No.01EX495)}, pages 505--510, 2001.
+
 \bibitem{kbm}
 Philip Polack, Florent Altché, Brigitte Novel, and Arnaud de~La~Fortelle.
 \newblock The kinematic bicycle model: A consistent model for planning feasible

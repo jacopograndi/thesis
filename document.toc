@@ -16,50 +16,51 @@
 \contentsline {subsection}{\numberline {2.4}Interface design and menus}{16}{}%
 \contentsline {section}{\numberline {3}Implementation}{21}{}%
 \contentsline {subsection}{\numberline {3.1}Level design and 3D models}{21}{}%
-\contentsline {subsection}{\numberline {3.2}UDP Sockets with fragmentation and optional retransmission}{25}{}%
+\contentsline {subsection}{\numberline {3.2}UDP Sockets with fragmentation, optional retransmission and integrity check}{25}{}%
 \contentsline {paragraph}{Fragmentation}{26}{}%
 \contentsline {paragraph}{Optional Retransmission}{26}{}%
-\contentsline {subsection}{\numberline {3.3}Game Architecture}{27}{}%
-\contentsline {paragraph}{Model}{27}{}%
-\contentsline {paragraph}{View}{28}{}%
-\contentsline {paragraph}{Controller}{28}{}%
-\contentsline {subsection}{\numberline {3.4}Synchronization}{29}{}%
-\contentsline {paragraph}{Inputs synchronization}{29}{}%
-\contentsline {paragraph}{State synchronization}{29}{}%
-\contentsline {subsubsection}{\numberline {3.4.1}Dead reckoning and latency hiding}{30}{}%
-\contentsline {paragraph}{Delay}{30}{}%
-\contentsline {paragraph}{Rollback}{30}{}%
-\contentsline {paragraph}{Extrapolation}{31}{}%
-\contentsline {subsubsection}{\numberline {3.4.2}Advantages over HLAPI \cite {hlapi}}{31}{}%
-\contentsline {subsection}{\numberline {3.5}Agent Based Traffic Simulation}{32}{}%
-\contentsline {subsubsection}{\numberline {3.5.1}Definition and Assumptions}{32}{}%
-\contentsline {paragraph}{Traffic Lights}{35}{}%
-\contentsline {subsubsection}{\numberline {3.5.2}Implementation}{35}{}%
-\contentsline {paragraph}{Car-Train Agent}{35}{}%
-\contentsline {paragraph}{Integration}{36}{}%
-\contentsline {subsubsection}{\numberline {3.5.3}Optimization}{36}{}%
-\contentsline {paragraph}{Collision Detection: Lookahead dictionary}{36}{}%
-\contentsline {paragraph}{Lookup optimization and caching}{37}{}%
-\contentsline {paragraph}{Intersection optimization: Grid indexing}{37}{}%
-\contentsline {paragraph}{Parallel Integration}{37}{}%
-\contentsline {paragraph}{Stopped cars linking}{38}{}%
-\contentsline {subsubsection}{\numberline {3.5.4}Traffic Synchronization}{38}{}%
-\contentsline {subsection}{\numberline {3.6}Kinematic Bycicle Model \cite {kbm}}{39}{}%
-\contentsline {subsubsection}{\numberline {3.6.1}Player movement}{41}{}%
-\contentsline {subsection}{\numberline {3.7}Radio}{42}{}%
-\contentsline {paragraph}{Voice Loopback}{42}{}%
-\contentsline {paragraph}{Buffers}{42}{}%
-\contentsline {paragraph}{Buffer delay}{43}{}%
-\contentsline {paragraph}{Sampling frequency and Resampling}{44}{}%
-\contentsline {paragraph}{Noise and Filters \cite {filters}}{44}{}%
-\contentsline {subsection}{\numberline {3.8}Video}{45}{}%
-\contentsline {subsection}{\numberline {3.9}Editor Tools}{46}{}%
-\contentsline {paragraph}{Map Generator}{46}{}%
-\contentsline {paragraph}{Graph Generator}{46}{}%
-\contentsline {section}{\numberline {4}Testing}{47}{}%
-\contentsline {subsection}{\numberline {4.1}Unit Testing}{47}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}Test Driven Development \cite {tdd}}{47}{}%
-\contentsline {subsection}{\numberline {4.2}Integration Testing}{47}{}%
-\contentsline {subsection}{\numberline {4.3}Clumsy \cite {clumsy}}{48}{}%
-\contentsline {subsection}{\numberline {4.4}System test and feedback}{48}{}%
-\contentsline {section}{\numberline {5}Conclusion}{50}{}%
+\contentsline {paragraph}{Integrity Check}{27}{}%
+\contentsline {subsection}{\numberline {3.3}Game Architecture}{28}{}%
+\contentsline {paragraph}{Model}{28}{}%
+\contentsline {paragraph}{View}{29}{}%
+\contentsline {paragraph}{Controller}{29}{}%
+\contentsline {subsection}{\numberline {3.4}Synchronization}{30}{}%
+\contentsline {paragraph}{Inputs synchronization}{30}{}%
+\contentsline {paragraph}{State synchronization}{30}{}%
+\contentsline {subsubsection}{\numberline {3.4.1}Dead reckoning and latency hiding}{31}{}%
+\contentsline {paragraph}{Delay}{31}{}%
+\contentsline {paragraph}{Rollback}{31}{}%
+\contentsline {paragraph}{Extrapolation}{32}{}%
+\contentsline {subsubsection}{\numberline {3.4.2}Advantages over HLAPI \cite {hlapi}}{32}{}%
+\contentsline {subsection}{\numberline {3.5}Agent Based Traffic Simulation}{33}{}%
+\contentsline {subsubsection}{\numberline {3.5.1}Definition and Assumptions}{33}{}%
+\contentsline {paragraph}{Traffic Lights}{36}{}%
+\contentsline {subsubsection}{\numberline {3.5.2}Implementation}{36}{}%
+\contentsline {paragraph}{Car-Train Agent}{36}{}%
+\contentsline {paragraph}{Integration}{37}{}%
+\contentsline {subsubsection}{\numberline {3.5.3}Optimization}{37}{}%
+\contentsline {paragraph}{Collision Detection: Lookahead dictionary}{37}{}%
+\contentsline {paragraph}{Lookup optimization and caching}{38}{}%
+\contentsline {paragraph}{Intersection optimization: Grid indexing}{38}{}%
+\contentsline {paragraph}{Parallel Integration}{38}{}%
+\contentsline {paragraph}{Stopped cars linking}{39}{}%
+\contentsline {subsubsection}{\numberline {3.5.4}Traffic Synchronization}{39}{}%
+\contentsline {subsection}{\numberline {3.6}Kinematic Bycicle Model \cite {kbm}}{40}{}%
+\contentsline {subsubsection}{\numberline {3.6.1}Player movement}{42}{}%
+\contentsline {subsection}{\numberline {3.7}Radio}{43}{}%
+\contentsline {paragraph}{Voice Loopback}{43}{}%
+\contentsline {paragraph}{Buffers}{43}{}%
+\contentsline {paragraph}{Buffer delay}{44}{}%
+\contentsline {paragraph}{Sampling frequency and Resampling}{45}{}%
+\contentsline {paragraph}{Noise and Filters \cite {filters}}{45}{}%
+\contentsline {subsection}{\numberline {3.8}Video}{46}{}%
+\contentsline {subsection}{\numberline {3.9}Editor Tools}{47}{}%
+\contentsline {paragraph}{Map Generator}{47}{}%
+\contentsline {paragraph}{Graph Generator}{47}{}%
+\contentsline {section}{\numberline {4}Testing}{48}{}%
+\contentsline {subsection}{\numberline {4.1}Unit Testing}{48}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Test Driven Development \cite {tdd}}{48}{}%
+\contentsline {subsection}{\numberline {4.2}Integration Testing}{48}{}%
+\contentsline {subsection}{\numberline {4.3}Clumsy \cite {clumsy}}{49}{}%
+\contentsline {subsection}{\numberline {4.4}System test and feedback}{49}{}%
+\contentsline {section}{\numberline {5}Conclusion}{51}{}%

@@ -274,7 +274,7 @@ The game maps are constructed by placing blocks, which are made of multiple buil
 
 \clearpage
 
-\subsection{UDP Sockets with fragmentation and optional retransmission}
+\subsection{UDP Sockets with fragmentation, optional retransmission and integrity check}
 The connection is handled using native C\# asynchronous UDP sockets. The network can send a message arbitrarily large (It will be fragmented into smaller packets). This system substitutes the deprecated Unity HLAPI (Unity Networking High Level API). Every message has a protocol number, which is used as a multiplexer allowing differently formatted messages to be sent along the same channel. The protocol is as follows:
 
 
@@ -308,6 +308,9 @@ If the message is longer than 1024 bytes, it's fragmented in parts no longer tha
 
 \paragraph{Optional Retransmission}
 If the packet is marked as resend the system will wait for a response (ack) indicating that the packet was received. The system checks periodically if the timeouts of each packet is over. If the ack isn't received and the timeout is over the system will resend the packet with the same serial number.
+
+\paragraph{Integrity Check}
+Each packet has a checksum byte to verify that the message has not been corrupted during transit. To generate the byte, the message is first assembled with the byte set to zero. The checksum is then set to 256 - the sum of all bytes. The receiver sums all bytes in the packets: if the sum is zero the message is correct. This technique is known as 1's complement sum \cite{checksum} and detects any single bit error, but has a lot of collision. A collision happens when the corruption happens to not modify the checksum.
 
 \clearpage
 
@@ -512,7 +515,7 @@ The development process was sped up by the construction of tools for Unity. This
 \paragraph{Map Generator}
 The map generator places prefabs on a grid, randomizes their z rotation snapping on the 4 cardinal rotations and swaps these prefabs with their updated ones. This script also places road segments ensuring that no segment overlaps another and giving each segment a unique identifier.
 \paragraph{Graph Generator}
-This tool generates a graph (a nodes and arcs tuple) from the elements present in the scene. The graph is saved directly in the Assets/Resources folder in json format. The graph can be visualized in the scene with a toggle in the script. The tool also visualizes the traffic rail graph, the cars and the traffic lights state. The traffic simulation can be stepped through directly in the unity editor, which eliminates the need to wait for unity to reset it's state while entering play mode.
+This tool generates a graph (a nodes and arcs tuple) from the elements present in the scene. The graph is saved directly in the Assets/Resources folder in json format. The graph can be visualized in the scene with a toggle in the script. The tool also visualizes the traffic rail graph, the cars and the traffic lights state. The traffic simulation can be stepped through directly in the unity editor, which eliminates the need to wait for unity to reset it's state while entering play mode. The tool can also place signs that display the name of the road at each intersection.
 
 \clearpage
 
@@ -524,7 +527,7 @@ The model of the game is developed using the test driven development technique. 
 \subsection{Integration Testing}
 The integration testing phase is largely done by hand. This is necessary as unity does't have a way to run multiple deployed instances inside a test environment. The testing routine is to deploy an executable and run it parallel to the editor instance. Some components are tested automatically, such as the serialization of the model and the interaction between smaller model components.
 \subsection{Clumsy \cite{clumsy}}
-Clumsy is a program that makes the internet network worse. It simulates packet loss, jitter, high latency, small bandwith, packet tampering. This tool is the basis on the game's retransmission and fragmentation algorithm, because it creates the perfect network conditions for testing. The packet tampering option highlighted the need to implement an integrity check for messages, which is necessary if the application is deployed on the web. If the application is run on a local network, the chances that a packet is tampered is very low.
+Clumsy is a program that makes the internet network worse. It simulates packet loss, jitter, high latency, small bandwith, packet tampering. This tool is the basis on the game's retransmission and fragmentation algorithm, because it creates the perfect network conditions for testing. The packet tampering option highlighted the need to implement an integrity check for messages, which is necessary if the application is deployed on the web.
 
 \subsection{System test and feedback}
 The game as a whole was tested by indipendent testers. The testers rotated roles (courier and master), there was no more than one courier at a time and they were all set in the map "Village". The results are summed up in the following table:
@@ -554,7 +557,7 @@ The testers started with a simple scenario and little time. They learned how to 
 \clearpage
 
 \section{Conclusion}
-In this work we analyzed the usefulness of videogames as a learning tool. We designed and implemented a multiplayer videogame with an integrated radio that forces a rapid exchange of information between players to win. We developed a substitute for the default Unity Networking system (HLAPI) and a custom serializer that support large messages and is stable over adverse local network condition. We developed a toolchain to easily produce maps from the Unity Editor. We used test driven development to implement the game rules. We designed and implemented a graph conversion algorithm and a parallel traffic simulation. \\
+In this work we analyzed the usefulness of videogames as a learning tool. We designed and implemented a multiplayer videogame with an integrated radio that forces a rapid exchange of information between players to win. We developed a substitute for the default Unity Networking system (HLAPI) and a custom serializer that support large messages and is stable over adverse network condition. We developed a toolchain to easily produce maps from the Unity Editor. We used test driven development to implement the game rules. We designed and implemented a graph conversion algorithm and a parallel traffic simulation. \\
 
 The system tests results show a significant improvement of the player's performance in the game. \\
 
@@ -563,7 +566,7 @@ For what concerns future development we will focus on the following:
 \begin{itemize}
 	\item Addition of environmental audio to make the traffic a more effecive obstacle.
 	\item Addition of other obstacles such as railway level passages and pedestrians.
-	\item Improvement of the network system to deal with tampering and be more stable in remote networks.
+	\item Improvement of the traffic simulation by making it react to the players. 
 	\item Port of the master code in javascript to deploy the master version in a browser. This step has been considered during design and the codebase has been written to make such a port possible.
 \end{itemize}
 
