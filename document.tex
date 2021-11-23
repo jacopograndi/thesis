@@ -45,7 +45,7 @@ Dipartimento di Elettronica, Informazione e Bioingegneria \\
 \vspace{0.8cm}
 \includegraphics[width=0.4\textwidth]{poli}
 
-\vspace{2cm}
+\vspace{0.8cm}
 
 \begin{Large}
 \textbf{Fast communication training through asymmetrical multiplayer videogames}
@@ -90,6 +90,8 @@ I videogiochi sono un efficace modo per imparare. Per esempio i giochi di digita
 \clearpage
 
 \tableofcontents
+
+\afterpage{\blankpage}
 
 \clearpage
 
@@ -165,6 +167,8 @@ This game can be categorized as an exergame, term which is usually used for phys
 
 \vfill
 \frame{\includegraphics[width=\textwidth]{brain_age}}
+
+\afterpage{\blankpage}
 
 \clearpage
 
@@ -255,6 +259,8 @@ The player can see the carried item name, the item weight and the amount of live
 
 \paragraph{Radio visualizer}
 In the top left of every screen (except the main submenu) there is the radio icon. This icon is animated based on the state of the radio connection, if the local player is transmitting and if the channel is jammed by too many people speaking.
+
+\afterpage{\blankpage}
 
 \clearpage
 
@@ -618,6 +624,8 @@ The map generator places prefabs on a grid, randomizes their z rotation snapping
 \paragraph{Graph generator}
 This tool generates a graph (a nodes and arcs tuple) from the elements present in the scene. The graph is saved directly in the Assets/Resources folder in json format. The graph can be visualized in the scene with a toggle in the script. The tool also visualizes the traffic rail graph, the cars and the traffic lights state. The traffic simulation can be stepped through directly in the unity editor, which eliminates the need to wait for unity to reset it's state while entering play mode. The tool can also place signs that display the name of the road at each intersection.
 
+\afterpage{\blankpage}
+
 \clearpage
 
 \section{Testing}
@@ -626,8 +634,6 @@ Unit tests are automated tests, they ensure that a small section of code behaves
 \subsubsection {Test driven development \cite{tdd}} 
 The model of the game is developed using the test driven development technique. This technique allows writing testable code by first writing a failing test and then the code to pass it. This makes the code more robust and easier to clean. Other aspect of the game such as the controller, the view or the map tools are not easily testable this way as they depend on the unity framework. One of the goals of TDD is to make it easy to refactor code: if the refactored code passes all tests the code is correct, there's no need to run it to know. This relies on the robustness of the test suite. If an essential functionality is not tested, the test suite is incomplete and by running all tests there is no guarantee of correctness.
 \subsection{Integration testing}
-The integration testing phase is largely done by hand. This is necessary as unity does't have a way to run multiple deployed instances inside a test environment. The testing routine is to deploy an executable and run it parallel to the editor instance. Some components are tested automatically, such as the serialization of the model and the interaction between smaller model components.
-\subsection{Clumsy \cite{clumsy}}
 Clumsy is a program that makes the internet network worse. It simulates packet loss, jitter, high latency, small bandwith, packet tampering. This tool is the basis on the game's retransmission and fragmentation algorithm, because it creates the perfect network conditions for testing. The packet tampering option highlighted the need to implement an integrity check for messages, which is necessary if the application is deployed on the web.
 
 \subsection{System test and feedback}
@@ -654,6 +660,8 @@ The game as a whole was tested by independent testers. The testers rotated roles
 \end{center}
 
 The testers started with a simple scenario and little time. They learned how to play (although they pointed out that the game doesn't explain itself properly) and were able to complete the game in under 3 minutes in just 3 tries. The game seems far more difficult when disabling both the video feed and the player's location (GPS). From that moment on, the testers had a much harder time speaking. The master had to rely on the courier telling him were he was otherwise he would have no indication of his position. The testers found the signs of the street names and were starting to learn the map, so they were able to beat the game consistently.
+
+\afterpage{\blankpage}
 
 \clearpage
 
@@ -703,6 +711,8 @@ Code: \url{https://github.com/jacopograndi/radio} \\
 Document: \url{https://github.com/jacopograndi/thesis} \\
 
 \end{appendices}
+
+\afterpage{\blankpage}
 
 \clearpage
 

@@ -21,6 +21,10 @@ Forged alliance forever, a community driven project based on supreme commander:
   Forged alliance.
 \newblock \url{https://www.faforever.com/}.
 
+\bibitem{Halo}
+Halo franchise.
+\newblock \url{https://www.halowaypoint.com/}.
+
 \bibitem{ktne}
 Keep talking and nobody explodes.
 \newblock \url{https://keeptalkinggame.com/}.
@@ -33,6 +37,10 @@ Keep talking and nobody explodes, the elevator of doom by lthummus.
 More brain training.
 \newblock
   \url{https://www.nintendo.it/Giochi/Nintendo-Switch/Brain-Training-del-Dr-Kawashima-per-Nintendo-Switch-1656777.html}.
+
+\bibitem{starcraft}
+Starcraft franchise.
+\newblock \url{https://starcraft.com/}.
 
 \bibitem{typing}
 Typeracer, an online typing multiplayer videogame.
@@ -63,6 +71,11 @@ Damien Djaouti, Julian Alvarez, and Jean-Pierre Jessel.
 \newblock {\em Handbook of Research on Improving Learning and Motivation
   through Educational Games: Multidisciplinary Approaches}, 01 2011.
 
+\bibitem{adjacency_check}
+James~D. Foley, Andries van Dam, Steven~K. Feiner, and John~F. Hughes.
+\newblock {\em Computer Graphics: Principles and Practice (2nd Ed.)}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., USA, 1990.
+
 \bibitem{mvc}
 Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides.
 \newblock {\em Design Patterns: Elements of Reusable Object-Oriented Software}.
@@ -79,6 +92,12 @@ Philip Polack, Florent Altché, Brigitte Novel, and Arnaud de~La~Fortelle.
 \newblock The kinematic bicycle model: A consistent model for planning feasible
   trajectories for autonomous vehicles?
 \newblock pages 812--818, 06 2017.
+
+\bibitem{noise}
+B.~D. Ripley.
+\newblock Computer generation of random variables: A tutorial.
+\newblock {\em International Statistical Review / Revue Internationale de
+  Statistique}, 51(3):301--319, 1983.
 
 \bibitem{filters}
 Julius~O. Smith.

@@ -17,6 +17,7 @@
 \contentsline {paragraph}{Radio visualizer}{20}{}%
 \contentsline {section}{\numberline {3}Implementation}{21}{}%
 \contentsline {subsection}{\numberline {3.1}Level design and 3D models}{21}{}%
+\contentsline {paragraph}{Bridges}{24}{}%
 \contentsline {subsection}{\numberline {3.2}UDP Sockets with fragmentation, optional retransmission and integrity check}{25}{}%
 \contentsline {paragraph}{Fragmentation}{26}{}%
 \contentsline {paragraph}{Optional retransmission}{26}{}%
@@ -32,36 +33,43 @@
 \contentsline {paragraph}{Delay}{31}{}%
 \contentsline {paragraph}{Rollback}{31}{}%
 \contentsline {paragraph}{Extrapolation}{32}{}%
-\contentsline {subsubsection}{\numberline {3.4.2}Advantages over HLAPI \cite {hlapi}}{32}{}%
+\contentsline {paragraph}{Serializer}{32}{}%
+\contentsline {subsubsection}{\numberline {3.4.2}HLAPI \cite {hlapi}}{32}{}%
 \contentsline {subsection}{\numberline {3.5}Agent based traffic simulation}{33}{}%
 \contentsline {subsubsection}{\numberline {3.5.1}Definition and assumptions}{33}{}%
 \contentsline {paragraph}{Traffic lights}{36}{}%
 \contentsline {subsubsection}{\numberline {3.5.2}Implementation}{36}{}%
 \contentsline {paragraph}{Car-Train agent}{36}{}%
 \contentsline {paragraph}{Integration}{37}{}%
-\contentsline {subsubsection}{\numberline {3.5.3}Optimization}{37}{}%
-\contentsline {paragraph}{Collision detection: lookahead dictionary}{37}{}%
-\contentsline {paragraph}{Lookup optimization and caching}{38}{}%
-\contentsline {paragraph}{Intersection optimization: Grid indexing}{38}{}%
-\contentsline {paragraph}{Parallel integration}{38}{}%
-\contentsline {paragraph}{Stopped cars linking}{39}{}%
-\contentsline {subsubsection}{\numberline {3.5.4}Traffic synchronization}{39}{}%
-\contentsline {subsection}{\numberline {3.6}Kinematic bycicle model \cite {kbm}}{40}{}%
-\contentsline {subsubsection}{\numberline {3.6.1}Player movement}{42}{}%
-\contentsline {subsection}{\numberline {3.7}Radio}{43}{}%
-\contentsline {paragraph}{Voice loopback}{43}{}%
-\contentsline {paragraph}{Buffers}{43}{}%
-\contentsline {paragraph}{Buffer delay}{44}{}%
-\contentsline {paragraph}{Sampling frequency and resampling}{45}{}%
-\contentsline {paragraph}{Noise and Filters \cite {filters}}{45}{}%
-\contentsline {subsection}{\numberline {3.8}Video}{46}{}%
-\contentsline {subsection}{\numberline {3.9}Editor tools}{47}{}%
-\contentsline {paragraph}{Map generator}{47}{}%
-\contentsline {paragraph}{Graph generator}{47}{}%
-\contentsline {section}{\numberline {4}Testing}{48}{}%
-\contentsline {subsection}{\numberline {4.1}Unit testing}{48}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}Test driven development \cite {tdd}}{48}{}%
-\contentsline {subsection}{\numberline {4.2}Integration testing}{48}{}%
-\contentsline {subsection}{\numberline {4.3}Clumsy \cite {clumsy}}{49}{}%
-\contentsline {subsection}{\numberline {4.4}System test and feedback}{49}{}%
-\contentsline {section}{\numberline {5}Conclusion}{51}{}%
+\contentsline {subsubsection}{\numberline {3.5.3}Optimization}{39}{}%
+\contentsline {paragraph}{Collision detection: lookahead dictionary}{39}{}%
+\contentsline {paragraph}{Lookup optimization and caching}{39}{}%
+\contentsline {paragraph}{Intersection optimization: Grid indexing}{39}{}%
+\contentsline {paragraph}{Parallel integration}{40}{}%
+\contentsline {paragraph}{Stopped cars linking}{40}{}%
+\contentsline {subsubsection}{\numberline {3.5.4}Traffic synchronization}{41}{}%
+\contentsline {subsection}{\numberline {3.6}Kinematic bicycle model \cite {kbm}}{42}{}%
+\contentsline {subsubsection}{\numberline {3.6.1}Player movement}{45}{}%
+\contentsline {paragraph}{Player gravity}{45}{}%
+\contentsline {subsection}{\numberline {3.7}Game sounds}{46}{}%
+\contentsline {paragraph}{Player bike sounds}{46}{}%
+\contentsline {paragraph}{Ambient and traffic sounds}{46}{}%
+\contentsline {subsection}{\numberline {3.8}Radio}{47}{}%
+\contentsline {paragraph}{Voice loopback}{47}{}%
+\contentsline {paragraph}{Buffers}{47}{}%
+\contentsline {paragraph}{Buffer delay}{48}{}%
+\contentsline {paragraph}{Sampling frequency and resampling}{49}{}%
+\contentsline {paragraph}{Noise}{49}{}%
+\contentsline {paragraph}{Filters \cite {filters}}{50}{}%
+\contentsline {subsection}{\numberline {3.9}Video}{51}{}%
+\contentsline {subsection}{\numberline {3.10}Editor tools}{52}{}%
+\contentsline {paragraph}{Map generator}{52}{}%
+\contentsline {paragraph}{Graph generator}{52}{}%
+\contentsline {section}{\numberline {4}Testing}{53}{}%
+\contentsline {subsection}{\numberline {4.1}Unit testing}{53}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Test driven development \cite {tdd}}{53}{}%
+\contentsline {subsection}{\numberline {4.2}Integration testing}{53}{}%
+\contentsline {subsection}{\numberline {4.3}System test and feedback}{54}{}%
+\contentsline {section}{\numberline {5}Conclusion}{55}{}%
+\contentsline {section}{\numberline {A}Quadratic bezier curves}{57}{}%
+\contentsline {section}{\numberline {B}Source code}{58}{}%

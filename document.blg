@@ -25,14 +25,18 @@ Warning--entry type for "counterstrike" isn't style-file defined
 --line 116 of file references.bib
 Warning--entry type for "faf" isn't style-file defined
 --line 121 of file references.bib
-Warning--I didn't find a database entry for "Halo"
-Warning--I didn't find a database entry for "starcraft"
+Warning--entry type for "starcraft" isn't style-file defined
+--line 126 of file references.bib
+Warning--entry type for "halo" isn't style-file defined
+--line 131 of file references.bib
 Warning--to sort, need author or key in hlapi
 Warning--to sort, need author or key in clumsy
 Warning--to sort, need author or key in rhythm
 Warning--to sort, need author or key in typing
 Warning--to sort, need author or key in counterstrike
 Warning--to sort, need author or key in faf
+Warning--to sort, need author or key in Halo
+Warning--to sort, need author or key in starcraft
 Warning--to sort, need author or key in ktne
 Warning--to sort, need author or key in ktneelevator
 Warning--to sort, need author or key in unrailed
@@ -40,45 +44,45 @@ Warning--to sort, need author or key in mbt
 Warning--to sort, need author or key in bezier
 Warning--empty booktitle in kbm
 Warning--empty publisher in try
-You've used 19 entries,
+You've used 23 entries,
             2118 wiz_defined-function locations,
-            578 strings with 6260 characters,
-and the built_in function-call counts, 4223 in all, are:
-= -- 382
-> -- 122
+            596 strings with 6753 characters,
+and the built_in function-call counts, 5151 in all, are:
+= -- 469
+> -- 154
 < -- 2
-+ -- 56
-- -- 36
-* -- 201
-:= -- 590
-add.period$ -- 46
-call.type$ -- 19
-change.case$ -- 71
++ -- 70
+- -- 46
+* -- 255
+:= -- 728
+add.period$ -- 56
+call.type$ -- 23
+change.case$ -- 87
 chr.to.int$ -- 0
-cite$ -- 32
-duplicate$ -- 191
-empty$ -- 463
-format.name$ -- 36
-if$ -- 965
+cite$ -- 38
+duplicate$ -- 228
+empty$ -- 558
+format.name$ -- 46
+if$ -- 1168
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 12
-newline$ -- 87
-num.names$ -- 16
-pop$ -- 185
+int.to.str$ -- 23
+missing$ -- 15
+newline$ -- 105
+num.names$ -- 20
+pop$ -- 219
 preamble$ -- 1
-purify$ -- 56
+purify$ -- 69
 quote$ -- 0
-skip$ -- 145
+skip$ -- 170
 stack$ -- 0
-substring$ -- 167
-swap$ -- 38
+substring$ -- 212
+swap$ -- 42
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
-warning$ -- 13
-while$ -- 21
-width$ -- 21
-write$ -- 160
-(There were 26 warnings)
+type$ -- 82
+warning$ -- 15
+while$ -- 27
+width$ -- 25
+write$ -- 196
+(There were 28 warnings)

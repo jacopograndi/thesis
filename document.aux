@@ -2,7 +2,6 @@
 \citation{hlapi}
 \citation{kbm}
 \citation{tdd}
-\citation{clumsy}
 \citation{try}
 \citation{rhythm}
 \citation{typing}
@@ -44,9 +43,10 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Level design and 3D models}{21}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Downtown block\relax }}{21}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Residential block\relax }}{21}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Industrial block\relax }}{22}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Industrial block\relax }}{21}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Game map: Village. This map is the smallest and has the most bridges, the map is sunny and with a lot of ambient light.\relax }}{23}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Game map: City. This map is the largest and the most taxing performance-wise. The map is set at night with a lot of traffic lights and bright billboards lighting baked in.\relax }}{24}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Bridges}{24}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}UDP Sockets with fragmentation, optional retransmission and integrity check}{25}{}\protected@file@percent }
 \citation{checksum}
 \@writefile{toc}{\contentsline {paragraph}{Fragmentation}{26}{}\protected@file@percent }
@@ -70,7 +70,8 @@
 \@writefile{toc}{\contentsline {paragraph}{Rollback}{31}{}\protected@file@percent }
 \citation{hlapi}
 \@writefile{toc}{\contentsline {paragraph}{Extrapolation}{32}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}Advantages over HLAPI \cite  {hlapi}}{32}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Serializer}{32}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.4.2}HLAPI \cite  {hlapi}}{32}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.5}Agent based traffic simulation}{33}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.1}Definition and assumptions}{33}{}\protected@file@percent }
 \@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces Rail Graph construction from the Road Graph\relax }}{34}{}\protected@file@percent }
@@ -82,40 +83,47 @@
 \citation{bezier}
 \@writefile{lof}{\contentsline {figure}{\numberline {19}{\ignorespaces From the relative position of a car to the absolute position and direction. Left: linear, Right: quadratic bezier\relax }}{37}{}\protected@file@percent }
 \@writefile{toc}{\contentsline {paragraph}{Integration}{37}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}Optimization}{37}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Collision detection: lookahead dictionary}{37}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Lookup optimization and caching}{38}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Intersection optimization: Grid indexing}{38}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Parallel integration}{38}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Stopped cars linking}{39}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.4}Traffic synchronization}{39}{}\protected@file@percent }
+\citation{adjacency_check}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.3}Optimization}{39}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Collision detection: lookahead dictionary}{39}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Lookup optimization and caching}{39}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Intersection optimization: Grid indexing}{39}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Parallel integration}{40}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Stopped cars linking}{40}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.5.4}Traffic synchronization}{41}{}\protected@file@percent }
 \citation{kbm}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Kinematic bycicle model \cite  {kbm}}{40}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Kinematic bicycle model\relax }}{41}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}Player movement}{42}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Radio}{43}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Voice loopback}{43}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Buffers}{43}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Audio pipeline diagram, the boxes represent the buffers.\relax }}{44}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Buffer delay}{44}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6}Kinematic bicycle model \cite  {kbm}}{42}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {20}{\ignorespaces Kinematic bicycle model\relax }}{43}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.6.1}Player movement}{45}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Player gravity}{45}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7}Game sounds}{46}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Player bike sounds}{46}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Ambient and traffic sounds}{46}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Radio}{47}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Voice loopback}{47}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Buffers}{47}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {21}{\ignorespaces Audio pipeline diagram, the boxes represent the buffers.\relax }}{48}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Buffer delay}{48}{}\protected@file@percent }
+\citation{noise}
+\@writefile{toc}{\contentsline {paragraph}{Sampling frequency and resampling}{49}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Noise}{49}{}\protected@file@percent }
 \citation{filters}
-\@writefile{toc}{\contentsline {paragraph}{Sampling frequency and resampling}{45}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Noise and Filters \cite  {filters}}{45}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Hi-Pass filter Bode diagram\relax }}{45}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Hi-Pass filter Impulse response\relax }}{46}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.8}Video}{46}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Editor tools}{47}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Map generator}{47}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Graph generator}{47}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Filters \cite  {filters}}{50}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {22}{\ignorespaces Hi-Pass filter Bode diagram\relax }}{50}{}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {23}{\ignorespaces Hi-Pass filter Impulse response\relax }}{51}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.9}Video}{51}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.10}Editor tools}{52}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Map generator}{52}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Graph generator}{52}{}\protected@file@percent }
 \citation{tdd}
-\citation{clumsy}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Testing}{48}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Unit testing}{48}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Test driven development \cite  {tdd}}{48}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Integration testing}{48}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Clumsy \cite  {clumsy}}{49}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}System test and feedback}{49}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{51}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4}Testing}{53}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Unit testing}{53}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1}Test driven development \cite  {tdd}}{53}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Integration testing}{53}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}System test and feedback}{54}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5}Conclusion}{55}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A}Quadratic bezier curves}{57}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {B}Source code}{58}{}\protected@file@percent }
 \bibstyle{plain}
 \bibdata{references}
 \bibcite{bezier}{1}
@@ -123,18 +131,22 @@
 \bibcite{clumsy}{3}
 \bibcite{counterstrike}{4}
 \bibcite{faf}{5}
-\bibcite{ktne}{6}
-\bibcite{ktneelevator}{7}
-\bibcite{mbt}{8}
-\bibcite{typing}{9}
-\bibcite{hlapi}{10}
-\bibcite{unrailed}{11}
-\bibcite{minecraft}{12}
-\bibcite{tdd}{13}
-\bibcite{serious}{14}
-\bibcite{mvc}{15}
-\bibcite{checksum}{16}
-\bibcite{kbm}{17}
-\bibcite{filters}{18}
-\bibcite{try}{19}
-\gdef \@abspage@last{57}
+\bibcite{Halo}{6}
+\bibcite{ktne}{7}
+\bibcite{ktneelevator}{8}
+\bibcite{mbt}{9}
+\bibcite{starcraft}{10}
+\bibcite{typing}{11}
+\bibcite{hlapi}{12}
+\bibcite{unrailed}{13}
+\bibcite{minecraft}{14}
+\bibcite{tdd}{15}
+\bibcite{serious}{16}
+\bibcite{adjacency_check}{17}
+\bibcite{mvc}{18}
+\bibcite{checksum}{19}
+\bibcite{kbm}{20}
+\bibcite{noise}{21}
+\bibcite{filters}{22}
+\bibcite{try}{23}
+\gdef \@abspage@last{71}
