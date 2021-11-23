@@ -28,7 +28,6 @@
 
 \lstdefinestyle{sharpc}{language=[Sharp]C, frame=lr, rulecolor=\color{blue!80!black}}
 
-
 \begin{document}
 \setlength{\parindent}{0in}
 
@@ -80,7 +79,12 @@ Anno Accademico 2020/2021
 \afterpage{\blankpage}
 
 \begin{abstract}
-Games can be a powerful learning tool. For instance typing games and rhythm games are genres defined by the skill they require. These games reward players for improving, pushing the players to play more and better and trying to make the experience as fun as possible. The game we developed is focused in training the communication, planning and problem solving skills of the players. The game puts the players under time pressure and requires a significant amount of information to be exchanged quickly. It also forces a half duplex communication protocol emulating a radio, such that only one player may speak at a time. The courier players will also have to solve space navigation puzzles, obstacle avoidance and local route planning; others will have to make a general plan, assign tasks and deal with multitasking. 
+Videogames are a powerful learning tool. For instance typing games and rhythm games are genres defined by the skill they require. These games reward players for improving and try to make the experience as fun as possible. The game we developed is focused in training the communication, planning and problem solving skills of the players. The game puts the players under time pressure and requires a significant amount of information to be exchanged quickly. It also forces a half duplex communication protocol emulating a radio, such that only one player may speak at a time. 
+\end{abstract}
+
+\renewcommand{\abstractname}{Sommario}
+\begin{abstract}
+I videogiochi sono un efficace modo per imparare. Per esempio i giochi di digitazione e i giochi di ritmo sono generi definiti dalle abilità che richiedono. Questi giochi ricompensano il giocatore quando migliora e cercano di rendere l'esperienza il più divertente possibile. Il gioco che abbiamo sviluppato è incentrato ad allenare le abilità comunicative, quelle di pianificazione e quelle di risoluzione dei problemi. I giocatori sono spinti da un conto alla rovescia a scambiarsi una grande quantità di informazioni. Il gioco simula una radio half duplex, quindi i giocatori sono forzati a parlare uno alla volta.
 \end{abstract}
 
 \clearpage
@@ -105,10 +109,10 @@ Failure is an effective way to learn. This is the trial and error approach to pr
 Videogames have been subject of study in educational research and are starting to be used by schools. For instance, Minecraft \cite{minecraft} has an educational edition with the purpose of being a platform for learning chemistry, coding and being a virtual classroom. A serious game can be defined as "Any piece of software that merges a non-entertaining purpose (serious) with a video game structure (game)" \cite{serious}. Serious games thus represent a larger set of games than educational games. Skill training games are serious games, often called exergames if they are intended to make the player do physical exercise. The game we developed is designed to be a serious game, merging the fun of playing a videogame to the tedious learning task. 
 
 \paragraph{Skill training} 
-The skills we have designed the game to train are problem-solving and communication. Videogames are a good medium to train problem-solving as stated above. Communication, chat or voice chat, is only in multiplayer games. In these games it is rarely used as a core aspect of the game and is just a platform to socialize or banter. Voice chats are often used effectively in competitive team games such as Counterstrike \cite{counterstrike} or Forged Alliance \cite{faf}, but they are not required. We required the use of a voice chat by forcing the players to exchange information that is needed to beat the game. The main difficulty of the game is to get the informations from the other players. 
+The skills we have designed the game to train are problem-solving and communication. Videogames are a good medium to train problem-solving as stated above. Communication, chat or voice chat, is only in multiplayer games. In these games it is rarely used as a core aspect of the game and is just a platform to socialize or banter. Voice chats are often used effectively in competitive team games such as Counterstrike \cite{counterstrike} or Forged Alliance \cite{faf}, but they are not required. We required the use of a voice chat by forcing the players to exchange information that is needed to beat the game. The main difficulty of the game is to get the information from the other players. 
 
 \subsection{Applicable scenarios}
-There are situations in which an operation team have to be guided by a remote team. This situations are common in cave exploration, cave rescues, bomb defusal, warfare and even firefighting operations in thick fog. The operation team lacks vital information to act sensibly, informations that the remote team can provide. Although, the remote team may need to ask for local data, for instance a description of the operation team surroundings, to remove uncertainties from its model of reality. If the exchange of information is slow and inefficient the operation team may have to take unnecessary risks and possibly lead to a failure, which in the situations described in the examples is catastrophic.
+There are situations in which an operation team have to be guided by a remote team. This situations are common in cave exploration, cave rescues, bomb defusal, warfare and even firefighting operations in thick fog. The operation team lacks vital information to act sensibly, information that the remote team can provide. Although, the remote team may need to ask for local data, for instance a description of the operation team surroundings, to remove uncertainties from its model of reality. If the exchange of information is slow and inefficient the operation team may have to take unnecessary risks and possibly lead to a failure, which in the situations described in the examples is catastrophic.
 
 \subsection{Asymmetrical multiplayer}
 A game has asymmetrical multiplayer when the players play the game differently. There are multiple levels of asymmetry: from a slight imbalance in the mechanics to a completely separate set of rules. In fps (first person shooter) games like Halo \cite{Halo} the players usually start with the same action set but the map can be asymmetric. Games like Starcraft \cite{starcraft} have three different races to choose from that offer wildly different strategies and gameplay, which is much more asymmetric. Keep Talking and Nobody Explodes is the most asymmetrical game in the cited games: a player defuses a virtual bomb while the other just has a printed manual on how to do it. The game we designed is an asymmetrical game because it's easier to hide information between players. They are separated in different virtual spaces, they can gather information and act differently.
@@ -117,7 +121,7 @@ A game has asymmetrical multiplayer when the players play the game differently. 
 We analyzed more in depth a set of games that inspired the design, are good examples of serious games or feature asymmetrical multiplayer. 
 
 \paragraph{Keep Talking and Nobody Explodes} \cite{ktne}
-The game consists in defusing a ticking bomb by solving puzzles attatched to it. It's a two player game, one player is the defuser and the other has a bomb-defusal manual. The players have to exchange the puzzle state and solutions. This game fits the serious game definition. The primary purpose of the game is to entertain, but to be entertained the game requires certain skills by the players. 
+The game consists in defusing a ticking bomb by solving puzzles attached to it. It's a two player game, one player is the defuser and the other has a bomb-defusal manual. The players have to exchange the puzzle state and solutions. This game fits the serious game definition. The primary purpose of the game is to entertain, but to be entertained the game requires certain skills by the players. 
 
 \vspace{0.4cm}
 \frame{\includegraphics[width=\textwidth]{keep_talking_game}}
@@ -180,14 +184,14 @@ The streets are blocked by many obstacles:
   \item sidewalk decorations
 \end{itemize}
 The master has to plan the route in realtime and relay the path to each courier in the broadcast channel based on the level of traffic.
-The couriers drive following the Master path, they only see the pickup points and if they have picked up an item, the corrisponding dropoff point.
+The couriers drive following the path that the remote master suggests: they only see the pickup point and the dropoff point, they don't know the way from the pickup to the dropoff.
 The game is lost if the players did not complete all tasks within the time limit, they win if they can complete all tasks.
 
 \subsection{Traffic simulation}
-The cars are agents that move through a graph representation of the streets. The cars roam through the city by turning randomly at intersections. The cars respect traffic lights and occasionally will crash so that traffic jams happen dynamically.
+The cars are agents that move through a graph representation of the streets. The cars roam through the city by turning randomly at intersections. The cars respect traffic lights and occasionally will crash so that traffic jams happen dynamically. Hitting a car will trample the player and push him until the car stops or the player is no longer in front of the car. During this trampling, the players will constantly lose lives.
 
 \subsection{Items}
-The items to be delivered are named and have two attributes: lives and weight. When the player has an item and crashes into a wall, the item is damaged. If the item is too damaged, the task is failed and the item reverted to the start. The weight of an item slows the player down by applying an acceleration penalty and a max speed penalty. The weight is not displayed in the game but it's effect are apparent to the couriers.
+The items to be delivered are named and have two attributes: lives and weight. When the player has an item and crashes into a wall, the item is damaged. If the item is too damaged, the task is failed and the item reverted to the start. The players get a few invincibility frames when they lose a life. The weight of an item slows the player down by applying an acceleration penalty and a max speed penalty. The weight is not displayed in the game but it's effect are apparent to the couriers.
 
 \paragraph{Item table}
 
@@ -232,7 +236,7 @@ In the main submenu the player can choose a name and navigate to the lobby, sett
 \includegraphics[width=\textwidth]{settings}
 \caption{The settings submenu}
 \end{figure}
-The settings allows to control the game window, the game's graphic quality and the audio volumes. The menu is constructed dynamically and is easily expandable to accomodate for more options.
+The settings allows to control the game window, the game's graphic quality and the audio volumes. The menu is constructed dynamically and is easily expandable.
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{lobby}
 \caption{The lobby submenu}
@@ -247,7 +251,7 @@ The master has at his left the task list and the time left in the game. In the b
 \includegraphics[width=\textwidth]{gameplay}
 \caption{The player interface}
 \end{figure}
-The player can see the carried item name, the item weight and the amount of lives remaining until the item is broken. When a player loses a life an animation plays flashing a white vignette and decrementing the lives counter. The lower bar is the only visualization of the weight of the items. If the master wants to know it, he has to ask the player once the players has picked the item up. 
+The player can see the carried item name, the item weight and the amount of lives remaining until the item is broken. When a player loses a life an animation plays flashing a white vignette and decrementing the lives counter with a floating -1 label. The lower bar is the only visualization of the weight of the items. If the master wants to know it, he has to ask the player once the players has picked the item up. 
 
 \paragraph{Radio visualizer}
 In the top left of every screen (except the main submenu) there is the radio icon. This icon is animated based on the state of the radio connection, if the local player is transmitting and if the channel is jammed by too many people speaking.
@@ -306,12 +310,12 @@ public enum Protocol {
 \end{lstlisting}
 
 
-If a kill is received, the network is shutted down. This functionality is used internally to exit from the networking callback cycle. Ack is used to send back a receive confirmation. The joinreq, syncconf and start protocol numbers are used by the lobby controller. The masterstate, startgame, ready, clientstate and over are used during the game. Mastercars is used to syncronize the initial state of the cars from the master to the clients. \\
+If a kill is received, the network is shut down. This functionality is used internally to exit from the networking callback cycle. Ack is used to send back a receive confirmation. The joinreq, syncconf and start protocol numbers are used by the lobby controller. The masterstate, startgame, ready, clientstate and over are used during the game. Mastercars is used to syncronize the initial state of the cars from the master to the clients. \\
 
 \clearpage
 
 \paragraph{Fragmentation}
-If the message is longer than 1024 bytes, it's fragmented in parts no longer than 1024. Each part has the protocol, the serial number and the id along with an offset and a size. The offset is what part of the original is sent and the size is the size of the whole message. At the receiving end, the datagrams received are assembled back into the original messages using the serial number, the offset and size. The partial messages are stored in a dictionary indexed by the serial number and are made available externally only when full. If the fragments arrive not in order it isn't a problem as they are assempled based on their offset.
+If the message is longer than 1024 bytes, it's fragmented in parts no longer than 1024. Each part has the protocol, the serial number and the id along with an offset and a size. The offset is what part of the original is sent and the size is the size of the whole message. At the receiving end, the datagrams received are assembled back into the original messages using the serial number, the offset and size. The partial messages are stored in a dictionary indexed by the serial number and are made available externally only when full. If the fragments arrive not in order it isn't a problem as they are assembled based on their offset.
 
 \begin{figure}[H]
 \begin{center}
@@ -338,7 +342,7 @@ The game is based on the model-view-controller pattern. \cite{mvc}
 \paragraph{Model}
 A subset of the game rules which constitute the model are implemented decoupling the code from Unity. This subset is everything apart from the physics simulation, player movement and input management. The reason behind the separation from Unity is that the master mode has to be as light as possible. The master mode is meant to be able to run smoothly on slower devices and be ready to be ported to a native browser integration, which is much harder if it relies on some engine features. The model is divided into static and dynamic. The dynamic model is the state that changes during the game and is synchronized from the master to every client. The static model is loaded at the start and contains unchanging data.
 \paragraph{View}
-The view is split into master and client. In both instances, it creates a visual representation of the model and links each element to the model with it's identifier. When the model is changed, the view is updated.
+The view is split into master and client. In both instances, it creates a visual representation of the model and links each element to the model with it's identifier. When the model is changed, the view is updated. We implemented two different views: a master view and a client view. Both views are thightly integrated in Unity systems. As the master is meant to be easily ported, the view is the only part to be completely rewritten for the other language and libraries (particularly javascript and webgl).
 \paragraph{Controller}
 The controller interfaces with the model, the view, the networking and Unity. The controller behaves differently between client and master. The client gathers player data from and sends it to the master through the network. The master applies the client changes and sends back the updated dynamic model state. 
 
@@ -366,10 +370,13 @@ The network layer is unreliable and has variable latency. To mitigate for the de
 The fixed delay (usually less than 100 milliseconds) negates the variance in latency if the packets all arrive before the fixed delay. If one packet is late, every instance of the game must wait for the missing packet, ignore it and move forward without or rollback when it arrives.
 
 \paragraph{Rollback}
-When the server receives a late packet, it reverts the game state to the time it was sent and reupdates it back to the current time. While waiting for the late packet, the server computes the next states trying to predict the missing packet effects. This extrapolation, also called dead reckoning, can be effective with a trivial implementation when using input synchronization (use the inputs from the previous packet). The game uses state synchronization, so the extrapolation is nontrivial to define.
+When the server receives a late packet, it reverts the game state to the time it was sent and updates it back to the current time. While waiting for the late packet, the server computes the next states trying to predict the missing packet effects. This extrapolation, also called dead reckoning, can be effective with a trivial implementation when using input synchronization (use the inputs from the previous packet). The game uses state synchronization, so the extrapolation is nontrivial to define.
 
 \paragraph{Extrapolation}
 The extrapolation used in the game involves only the remote players position in the client view. The position is modified by the speed of the players based on how much time has passed since the last packet and the last speed known is kept constant.
+
+\paragraph{Serializer}
+To synchronize the state we wrote a custom serializer that converts objects to bytes and vice versa. The implementation is unit tested and supports only basic types, no containers. To make an object serializable it needs to implement serialize and deserialize. The serializer works as a queue: it's constructed by appending basic types and deconstructed by popping from the bottom of the queue indicating the type of the popped object to interpret the byte array correctly. The serializer can be generalized by writing the serialize and deserialize methods automatically or by using templated methods. The serializer methods are implemented in GameState, TrafficState and LobbyConfiguration. To serialize a list or a dictionary, the size of the collection is pushed and then the elements.
 
 \subsubsection{HLAPI \cite{hlapi}}
 Unity provides the multiplayer high level API which is a system that offers messages, serialization, state synchronization and network classes. HLAPI is deprecated and highly integrated in Unity, which is not desirable as it makes it very difficult to decouple the state of the game from Unity.
@@ -379,7 +386,7 @@ Unity provides the multiplayer high level API which is a system that offers mess
 \subsection{Agent based traffic simulation}
 
 \subsubsection{Definition and assumptions}
-The agents of the simulation, cars, are defined by their position relative to a graph, a velocity and other paramters (random acceleration, random seed). This graph called "rail graph" is derived from the street level graph, which is a graph that defines the layout of the roads. The rail graph gets it's name from the cars behaving more like trains or trams, as they can't deviate from the rail graph edges. The rail graph is constructed by replacing every node of the road graph with an intersection and every edge with lanes. The road graph has a parameter for every edge indicating how many lanes the street has.
+The agents of the simulation, cars, are defined by their position relative to a graph, a velocity and other paramters (random acceleration, random seed). This graph called "rail graph" is derived from the street level graph, which is a graph that defines the layout of the roads. The rail graph gets it's name from the cars behaving more like trains or trams, as they can't deviate from the rail graph edges. The rail graph is constructed by replacing every node of the road graph with an intersection and every edge with as many edges as lanes. The road graph has a parameter for every edge indicating how many lanes the street has. The road graph is an undirected graph while the rail graph is directed. The direction of the rail graph edges are determined by calculating if they are on the left or the right side of the road graph edge using cross products. The following figure shows the conversion of 4 way intersections. 
 \begin{figure}[H]
 \begin{center}
 \includegraphics[height=18.5cm]{railgraph}
@@ -393,10 +400,10 @@ The agents of the simulation, cars, are defined by their position relative to a 
 \caption{Left turn without traffic lights causes instant jam, this is the state after only 10 steps}
 \end{figure}
 \bigskip 
- To alleviate this jam, the left turning rails would have to be non intersecting and a left turn semaphore would have to be put in place. However, it is not necessary to do so as every point is still reachable without turning left.
+ To alleviate this jam, the left turning rails would have to be non intersecting and a left turn semaphore would have to be put in place. However, it is not necessary to do so as every point is still reachable without turning left. 
 
 \paragraph{Traffic lights}
-Traffic lights are placed on the intersection's inward rails. This lights are coordinated at a street node level, so every traffic lights in an intersection is controlled by a single timer. Based on the position of this timer, the traffic lights states is set. The traffic lights are grouped into odd and even parity: odd parity lights are phase shifted by half a timer cycle. This grouping makes lights switch on and off based on their direction.
+Traffic lights are placed on the intersection's inward rails. This lights are coordinated at a street node level, so every traffic lights in an intersection is controlled by a single timer. Based on the position of this timer, the traffic lights states is set. The traffic lights are grouped into odd and even parity: odd parity lights are phase shifted by half a timer cycle. This grouping makes lights switch on and off based on their direction. The grouping algorithm checks if the edge on which the traffic light is placed (if the traffic light is on a node, it considers the edge which is not in the intersection) is closer to the x axis or the z axis (Unity defines the y axis as the up axis). This assumes that the roads are all aligned to the x or z axis, which is the case in the game's maps. The algorithm can be generalized to non aligned roads by modifying the alignment check on a per intersection basis.
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{semaphore}
 \caption{Traffic light timer and states}
@@ -405,7 +412,7 @@ Traffic lights are placed on the intersection's inward rails. This lights are co
 \subsubsection{Implementation}
 \paragraph{Car-Train agent}
 The car's position is defined by the starting node, the ending node (so the edge on which the car is) and the relative position \begin{math}{rel \in [0, 1]}\end{math} along the edge. The absolute position of a car is the position of the car within the frame of reference of the position of the nodes of the rail graph.\\
-To get the absolute position a linear interpolation based on the relative position from the start to the end node is performed. If the edge on which the car is on is a bezier, the position is just the evaluation of the equation at the car's relative position.\\
+To get the absolute position a linear interpolation based on the relative position from the start to the end node is performed. If the edge on which the car is on is a bezier, the position is just the evaluation of the bezier equation at the car's relative position (see Appendix A for a summary of quadratic bezier curves).\\
 To get the absolute direction the normalized difference of the end and start node is sufficient for the linear case. In the bezier case, the derivative of the bezier equation is the tangent vector, which normalized gives the absolute direction.
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{abspos}
@@ -413,29 +420,39 @@ To get the absolute direction the normalized difference of the end and start nod
 \end{figure}
 
 \paragraph{Integration}
-The traffic state is a collection of cars. The state is integrated discretely with a time differential dt. Every car calculates how much distance it has to move by using it's velocity. This distance is then consumed by navigating the graph. The car's relative position is incremented by the relative distance, which is the distance divided by the edge length. This is easily calculated for linear edges, but bezier edges have a complex elliptical integral to solve to get their lenght \cite{bezier}. Therefore, the relative distance is calculated using an approximation of the bezier lenght by sampling a few points. \\
-When a car reaches an intersection, if it has a red semaphore it stops. Otherwise, it chooses a rail based on it's initial random seed, which doesn't compromize the deterministic property of the simulation.
+The traffic state is a collection of cars and traffic lights. The state is integrated discretely with a time differential dt. Every car calculates how much distance it has to move by using it's velocity. This distance is then consumed by navigating the graph. The car's relative position is incremented by the relative distance, which is the distance divided by the edge length. This is easily calculated for linear edges, but bezier edges in general have a complex elliptical integral to solve to get their lenght \cite{bezier}. Therefore, the relative distance is calculated using an approximation of the bezier lenght by sampling a few points (in the game its 10 samples, which are also used to display the curves in the editor for debugging). \\
+When a car reaches an intersection, if it has a red semaphore it stops. Otherwise, it chooses a rail based on it's initial random seed using a deterministic formula, which doesn't compromise the deterministim of the simulation. The formula is 
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+next = car.seed % forwardStar(car.node);
+car.seed++;
+\end{lstlisting}
+
+The determinism of the whole simulation is important as the simulation will be univocally identified by an initial condition and a time. This eases synchronization as the only state which is passed is the first one and to keep every simulation in sync only the time needs to be known.
+
+\clearpage
 
 \subsubsection{Optimization}
 \paragraph{Collision detection: lookahead dictionary}
 Before the cars are moved, a lookup dictionary is constructed. This lookahead dictionary stores for every car the position it would have had if it moved some integration steps. The number of lookahead steps is a sensitive parameter with respect to number of incidents and runtime speed. Every time a car is moved, it checks if it would intersect any other future cars using the lookahead dictionary. If it would intersect, the car is stopped. \\
-The intersection between two cars is an overlap check on two circles per car that approximate the bounds of a car.
+The intersection between two cars is an overlap check on two circles per car that approximate the bounds of a car. Using a box to represent the car bounding box is significantly slower, because it would be a convex polygon check \cite{adjacency_check}. 
 
 \paragraph{Lookup optimization and caching}
-Every collection used in the simulation can be accessed randomly in constant time and the absolute position and direction of a car are recalculated only when the relative position is modified. The rail graph has precalculated structures such as an index for accessing edges directly and a forward star collection for every node.
+Every collection used in the simulation can be accessed randomly in constant time and the absolute position and direction of a car are recalculated only when the relative position is modified. The rail graph has precalculated structures such as an index for accessing edges directly and a forward star collection for every node. The allocations have been reduced by preallocating the lookup dictionary of all the next positions. To calculate the next positions a support object is created that contains the state of the car in order to mutate the state without mutating the original object.
 
 \paragraph{Intersection optimization: Grid indexing}
 The intersection checking is the most costly operation for the simulation. In order to check faster, the cars further than a radius are excluded from the check. This is a coarse filter, but it requires a quadratic number of checks w.r.t. the number of cars. Therefore, an index based on the car's position is implemented. This index divides the space in a grid and for every square it has a collection listing all cars contained in the square. This index can be queried to return a neighbor of a car, and it does so by returning all cars in the original car square and all adjacent squares. 
 
 \paragraph{Parallel integration}
-The integration and collision detection algorithm can operate on a copy of the traffic state (which is a dictionary of cars) and apply the changes at the end of computation thanks to the lookahead dictionary. This makes it possible to parallelize the creation of the lookahead dictionary, the position integration and the collision detection. The threads have access to all the indexed data and traffic state and place their result into thread-safe containers. The threads work on a subset of cars and can't contaminate each other subset as they are changed at the end of computation.
+The integration and collision detection algorithm can operate on a copy of the traffic state (which is a dictionary of cars) and apply the changes at the end of computation thanks to the lookahead dictionary. This makes it possible to parallelize the creation of the lookahead dictionary, the position integration and the collision detection. The threads have access to all the indexed data and traffic state and place their result into thread-safe containers (C\# ConcurrentDictionary). The threads work on a subset of cars and can't contaminate each other subset as they are changed at the end of computation. The parallelization is done using Parallel.For, however the for does not loop through all the cars. The cars are split into 8 subsets: these subset are iterated by the Parallel.For. During performance analysis the Parallel.For performed way better when splitting the cars: a possible reason is that the thread pool .Net Parallel is tuned for shorter containers.
 
 \paragraph{Stopped cars linking}
 The cars which are traveling and detect a still car on their path are stopped and linked to the other car. This link is broken when the car detects that the linked car is moving. When a car is linked to another, it's not needed in the lookahead dictionary and can skip being moved. \\
 This linking procedure helps speeding up the intersection check, which is the slowest part of the whole simulation. Although, in the initial state the cars are placed in such a way that no car is linked, which forces the simulation to run slower until some cars are stopped in order for the linking procedure to take effect.
 
 \subsubsection{Traffic synchronization}
-The traffic simulation is synchronized by passing the current step of the master to the clients. The clients will advance their simulations until they reach the same step as the master, then wait until the master step is incremented. The initial state of the traffic model, which is composed of the cars and the traffic lights state, is sent from the master to the clients at the start of the game.
+The traffic simulation is synchronized by passing the current step of the master to the clients. The clients will advance their simulations until they reach the same step as the master, then wait until the master step is incremented. The initial state of the traffic model, which is composed of the cars and the traffic lights state, is sent from the master to the clients at the start of the game. The simulation is deterministic by design: the clients all calculate the same next steps from a common initial configuration, so only the current server step number is necessary.
 
 \clearpage
 
@@ -482,11 +499,56 @@ The model is integrated discretely.
 
 \bigskip
 
+\clearpage
+
 \subsubsection{Player movement}
-The player is moved following the KBM model. The Unity vertical and horiziontal input axis (which contain the standard movement input: arrows, wasd keys and gamepad sticks) are assigned to the control variables. 
+The player is moved following the KBM model. The Unity vertical and horizontal input axis (which contain the standard movement input: arrows, wasd keys and gamepad sticks) are assigned to the control variables. To enforce a soft speed limit and slow down backwards movement the acceleration is modified based on the velocity and a simple friction model is used.
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+float acceleration = Input.GetAxis("Vertical") 
+    * accelerationSensitivity; // input
+acceleration *= 0.2f;
+// reduce acceleration as speed increases
+acceleration *= Mathf.Exp(-Mathf.Abs(v)*0.1f);
+// speed limit when going backwards
+if (acceleration < 0 && v > 1)
+    acceleration *= Mathf.Sqrt(v);
+if (acceleration < 0 && v < 1) 
+    acceleration *= 0.1f;
+v += acceleration * Time.deltaTime;
+if (v < 0) v *= 0.99f;
+else v *= 0.999f; // friction
+\end{lstlisting}
+
+\paragraph{Player gravity}
+Gravity is handled by incrementing a gravity velocity vector when the player is not on the ground.
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+if (characterController.isGrounded) {
+    gravity = new Vector3();
+} else {
+    gravity += Vector3.down * 0.3f * Time.deltaTime;
+}
+\end{lstlisting}
 
 \clearpage
 
+\subsection{Game sounds}
+To make the game more immersive and to make the communication more difficult and strategic, we added audio. The sounds we used are from an online library: Freesound. 
+\footnote{
+Game sounds provided by Freesound, \\
+\url{https://freesound.org/people/hisoul} \\ 
+\url{https://freesound.org/people/klankbeeld/} \\
+\url{https://freesound.org/people/14FPanskaBubik_Lukas}
+}
+\paragraph{Player bike sounds}
+The bike has two sounds: one for acceleration and one for deceleration. The acceleration sound is a sample of a bmx bike constantly pedaling; the volume is proportional to the acceleration amount. The deceleration sound instead is a short sample, cut from a long bike freewheeling. The sample is cut such that it loops seamlessly. The sample volume is set to a constant whenever the bike is not accelerating and the pitch of the sound is modified based on the velocity. This simulates the ratcheting action in the rear bike wheel.
+\paragraph{Ambient and traffic sounds}
+The ambient sound is a sample of a calm nightly street and is played constantly in the background at a low volume. The traffic sound is an edited sample of horns and traffic noises. This sample is very loudly played when the player is near to a car and gradually gets quieter the further the player gets from any car. This volume game mechanic forces the players to drive in quiet streets if they have to listen to the master. Moreover, the game audio from the players is picked up and mixed to the radio voice. If the player is in a busy street both the player and the master would have a hard time hearing each other over the traffic noise.
+
+\clearpage
 
 \subsection{Radio}
 The radio in the game is a simulation of a real half-duplex radio. This means that only one player at the time may speak. This is enforced by transmitting white noise while two ore more player are using the radio channel simultaneously. The simulation relies on a server based network to centralize the audio mixing process. All clients send their audio to the server, which mixes all the sources and sends customized mixes to each client and the local speaker. As a convention, all audio passing though the mixer has a sampling rate of 48kHz. 
@@ -507,8 +569,33 @@ Every buffers delays the signal by a set amount. This delay is crucial to allevi
 
 \paragraph{Sampling frequency and resampling}
 The client's microphone may have a different sampling frequency from each other. The audio sent is resampled to 48 kHz and the audio received is resampled to the speakers sampling frequency. The sampler used is a custom sample and hold algorithm, it inserts or deletes samples following the ratio of sample rates.
-\paragraph{Noise and Filters \cite{filters}}
-The noise generated and mixed when multiple clients are speaking is white noise at 48 kHz. The audio generated by the clients is filtered by the server with a custom hi pass filter, which attenuates the low frequencies. This effect is done to make the simulation closer to an old style radio.\\
+\paragraph{Noise}
+The noise generated and mixed when multiple clients are speaking is additive gaussian noise. \cite{noise}
+
+\medskip
+
+\lstset{style=sharpc}
+\begin{lstlisting}
+float[] noise = new float[size];
+for (int i = 0; i < size; i++) {
+    float u1 = UnityEngine.Random.Range(0, 1f);
+    float u2 = UnityEngine.Random.Range(0, 1f);
+    float randStdNormal =
+        Mathf.Sqrt(-2.0f * Mathf.Log(u1)) *
+        Mathf.Sin(2.0f * Mathf.PI * u2);
+    noise[i] = randStdNormal * whiteNoiseVolume;
+}
+\end{lstlisting}
+
+\medskip
+
+Which is based on the following equation that samples a gaussian distribution:
+\begin{equation} x = \sqrt{-2\log{u_1}} * \sin{2 \pi u_2} \end{equation}
+
+\clearpage
+
+\paragraph{Filters \cite{filters}}
+The audio generated by the clients is filtered by the server with a custom hi pass filter, which attenuates the low frequencies. This effect is done to make the simulation closer to an old style radio.
 \begin{figure}[H]
 \includegraphics[width=\textwidth]{hipass}
 \caption{Hi-Pass filter Bode diagram}
@@ -535,7 +622,7 @@ This tool generates a graph (a nodes and arcs tuple) from the elements present i
 
 \section{Testing}
 \subsection{Unit testing}
-Unit tests are automated tests, they ensure that a small section of code behaves as intended. It's difficult to write testable code and to write tests for all the required functionality if the tests are not included in the design. To make it easier to write a complete test suite (set of tests of a program), a tecnique called test driven development is used to write code and tests.
+Unit tests are automated tests, they ensure that a small section of code behaves as intended. It's difficult to write testable code and to write tests for all the required functionality if the tests are not included in the design. To make it easier to write a complete test suite (set of tests of a program), a technique called test driven development is used to write code and tests.
 \subsubsection {Test driven development \cite{tdd}} 
 The model of the game is developed using the test driven development technique. This technique allows writing testable code by first writing a failing test and then the code to pass it. This makes the code more robust and easier to clean. Other aspect of the game such as the controller, the view or the map tools are not easily testable this way as they depend on the unity framework. One of the goals of TDD is to make it easy to refactor code: if the refactored code passes all tests the code is correct, there's no need to run it to know. This relies on the robustness of the test suite. If an essential functionality is not tested, the test suite is incomplete and by running all tests there is no guarantee of correctness.
 \subsection{Integration testing}
@@ -544,7 +631,7 @@ The integration testing phase is largely done by hand. This is necessary as unit
 Clumsy is a program that makes the internet network worse. It simulates packet loss, jitter, high latency, small bandwith, packet tampering. This tool is the basis on the game's retransmission and fragmentation algorithm, because it creates the perfect network conditions for testing. The packet tampering option highlighted the need to implement an integrity check for messages, which is necessary if the application is deployed on the web.
 
 \subsection{System test and feedback}
-The game as a whole was tested by indipendent testers. The testers rotated roles (courier and master), there was no more than one courier at a time and they were all set in the map "Village". The results are summed up in the following table:
+The game as a whole was tested by independent testers. The testers rotated roles (courier and master), there was no more than one courier at a time and they were all set in the map "Village". The results are summed up in the following table:
 
 \begin{center}
 \begin{tabular}{ |c|c|c|c||c|c| }
@@ -580,7 +667,8 @@ For what concerns future development we will focus on the following:
 \begin{itemize}
 	\item Addition of environmental audio to make the traffic a more effecive obstacle.
 	\item Addition of other obstacles such as railway level passages and pedestrians.
-	\item Improvement of the traffic simulation by making it react to the players. 
+	\item Improvement of the traffic simulation by making it react to the players and use the current one as a guide for free roaming agents. The rail system can be used as an idealized model of how the cars should move about, each rail agent corresponds to an actual free roaming agent that can solve local navigation and obstacle avoidance.
+	\item Improvement of the traffic simulation by porting the parallelized section to a compute shader. This will enable bigger maps to be feasibly handled.
 	\item Port of the master code in javascript to deploy the master version in a browser. This step has been considered during design and the codebase has been written to make such a port possible.
 \end{itemize}
 
