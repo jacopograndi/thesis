@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.23)  23 NOV 2021 14:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.10)  24 NOV 2021 11:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -519,12 +519,12 @@ Package pdftex.def Info: ./diagrams//game architecture.png  used on input line
  [28
 
  <./diagrams//game architecture.png>] [29]
-<./diagrams//net architecture.png, id=151, 452.69125pt x 303.1325pt>
+<./diagrams//net architecture.png, id=151, 452.69125pt x 302.12875pt>
 File: ./diagrams//net architecture.png Graphic file (type png)
 <use ./diagrams//net architecture.png>
 Package pdftex.def Info: ./diagrams//net architecture.png  used on input line 3
 67.
-(pdftex.def)             Requested size: 390.0pt x 261.15141pt.
+(pdftex.def)             Requested size: 390.0pt x 260.28667pt.
  [30
 
 ] [31 <./diagrams//net architecture.png>] [32]
@@ -650,27 +650,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 708--712
 ] [58
 
 ] (./document.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 37--40
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
 []\OT1/cmr/m/n/12 More brain train-ing.  $\OT1/cmtt/m/n/12 https : / / www .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--40
+Underfull \hbox (badness 10000) in paragraph at lines 33--36
 \OT1/cmtt/m/n/12 nintendo . it / Giochi / Nintendo-[]Switch /
  []
 
 
-Overfull \hbox (8.65271pt too wide) in paragraph at lines 37--40
+Overfull \hbox (8.65271pt too wide) in paragraph at lines 33--36
 \OT1/cmtt/m/n/12 Brain-[]Training-[]del-[]Dr-[]Kawashima-[]per-[]Nintendo-[]Swi
 tch-[]1656777 .
  []
 
 [59] [60]) [61] (./document.aux) ) 
 Here is how much of TeX's memory you used:
- 7495 strings out of 478994
- 109493 string characters out of 5864750
- 604971 words of memory out of 5000000
- 24862 multiletter control sequences out of 15000+600000
+ 7494 strings out of 478994
+ 109485 string characters out of 5864750
+ 604967 words of memory out of 5000000
+ 24861 multiletter control sequences out of 15000+600000
  413557 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,8n,88p,1016b,1326s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -690,7 +690,7 @@ fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share
 nts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/cm-super/sfrm1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfr
 m1200.pfb>
-Output written on document.pdf (71 pages, 6800064 bytes).
+Output written on document.pdf (71 pages, 6803463 bytes).
 PDF statistics:
  347 PDF objects out of 1000 (max. 8388607)
  211 compressed objects within 3 object streams

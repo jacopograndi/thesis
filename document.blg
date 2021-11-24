@@ -3,8 +3,6 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: document.aux
 The style file: plain.bst
 Database file #1: references.bib
-Warning--entry type for "clumsy" isn't style-file defined
---line 26 of file references.bib
 Warning--entry type for "hlapi" isn't style-file defined
 --line 38 of file references.bib
 Warning--entry type for "bezier" isn't style-file defined
@@ -30,7 +28,6 @@ Warning--entry type for "starcraft" isn't style-file defined
 Warning--entry type for "halo" isn't style-file defined
 --line 131 of file references.bib
 Warning--to sort, need author or key in hlapi
-Warning--to sort, need author or key in clumsy
 Warning--to sort, need author or key in rhythm
 Warning--to sort, need author or key in typing
 Warning--to sort, need author or key in counterstrike
@@ -44,45 +41,45 @@ Warning--to sort, need author or key in mbt
 Warning--to sort, need author or key in bezier
 Warning--empty booktitle in kbm
 Warning--empty publisher in try
-You've used 23 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            596 strings with 6753 characters,
-and the built_in function-call counts, 5151 in all, are:
-= -- 469
-> -- 154
+            593 strings with 6693 characters,
+and the built_in function-call counts, 4994 in all, are:
+= -- 455
+> -- 153
 < -- 2
-+ -- 70
++ -- 69
 - -- 46
-* -- 255
-:= -- 728
-add.period$ -- 56
-call.type$ -- 23
-change.case$ -- 87
+* -- 250
+:= -- 712
+add.period$ -- 54
+call.type$ -- 22
+change.case$ -- 84
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 228
-empty$ -- 558
+cite$ -- 36
+duplicate$ -- 221
+empty$ -- 535
 format.name$ -- 46
-if$ -- 1168
+if$ -- 1129
 int.to.chr$ -- 0
-int.to.str$ -- 23
+int.to.str$ -- 22
 missing$ -- 15
-newline$ -- 105
+newline$ -- 101
 num.names$ -- 20
-pop$ -- 219
+pop$ -- 208
 preamble$ -- 1
-purify$ -- 69
+purify$ -- 67
 quote$ -- 0
-skip$ -- 170
+skip$ -- 164
 stack$ -- 0
-substring$ -- 212
-swap$ -- 42
+substring$ -- 207
+swap$ -- 41
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 82
-warning$ -- 15
+type$ -- 78
+warning$ -- 14
 while$ -- 27
-width$ -- 25
-write$ -- 196
-(There were 28 warnings)
+width$ -- 24
+write$ -- 189
+(There were 26 warnings)

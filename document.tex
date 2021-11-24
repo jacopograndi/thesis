@@ -195,7 +195,7 @@ The game is lost if the players did not complete all tasks within the time limit
 The cars are agents that move through a graph representation of the streets. The cars roam through the city by turning randomly at intersections. The cars respect traffic lights and occasionally will crash so that traffic jams happen dynamically. Hitting a car will trample the player and push him until the car stops or the player is no longer in front of the car. During this trampling, the players will constantly lose lives.
 
 \subsection{Items}
-The items to be delivered are named and have two attributes: lives and weight. When the player has an item and crashes into a wall, the item is damaged. If the item is too damaged, the task is failed and the item reverted to the start. The players get a few invincibility frames when they lose a life. The weight of an item slows the player down by applying an acceleration penalty and a max speed penalty. The weight is not displayed in the game but it's effect are apparent to the couriers.
+The items to be delivered are named and have two attributes: lives and weight. When the player has an item and crashes into a wall, the item is damaged. If the item is too damaged, the task is failed and the item reverted to the start. The players get a few invincibility frames when they lose a life. The weight of an item slows the player down by applying an acceleration penalty and a max speed penalty. The weight is displayed in the game only to the couriers.
 
 \paragraph{Item table}
 
@@ -334,7 +334,7 @@ If the message is longer than 1024 bytes, it's fragmented in parts no longer tha
 If the packet is marked as resend the system will wait for a response (ack) indicating that the packet was received. The system checks periodically if the timeouts of each packet is over. If the ack isn't received and the timeout is over the system will resend the packet with the same serial number.
 
 \paragraph{Integrity check}
-Each packet has a checksum byte to verify that the message has not been corrupted during transit. To generate the byte, the message is first assembled with the byte set to zero. The checksum is then set to 256 - the sum of all bytes. The receiver sums all bytes in the packets: if the sum is zero the message is correct. This technique is known as 1's complement sum \cite{checksum} and detects any single bit error, but has a lot of collision. A collision happens when the corruption happens to not modify the checksum.
+Each packet has a checksum byte to verify that the message has not been corrupted during transit. To generate the byte, the message is first assembled with the byte set to zero. The checksum is then set to 256 - the sum of all bytes. The receiver sums all bytes in the packets: if the sum is zero the message is correct. This technique is known as 1's complement sum \cite{checksum} and detects any single bit error, but has a lot of collision. A collision happens when the corruption doesn't modify the checksum.
 
 \clearpage
 
@@ -620,7 +620,7 @@ The video feed is a frame of the player's camera which is sent to the master by 
 \subsection{Editor tools}
 The development process was sped up by the construction of tools for Unity. This tools are based on editor scripts, which allows to automatize some actions in the editors such as instantiating prefabs (keeping the prefab link) and destroying GameObjects.
 \paragraph{Map generator}
-The map generator places prefabs on a grid, randomizes their z rotation snapping on the 4 cardinal rotations and swaps these prefabs with their updated ones. This script also places road segments ensuring that no segment overlaps another and giving each segment a unique identifier.
+The map generator places prefabs on a grid, randomizes their z rotation snapping on the 4 cardinal directions and swaps these prefabs with their updated ones. This script also places road segments ensuring that no segment overlaps another and giving each segment a unique identifier.
 \paragraph{Graph generator}
 This tool generates a graph (a nodes and arcs tuple) from the elements present in the scene. The graph is saved directly in the Assets/Resources folder in json format. The graph can be visualized in the scene with a toggle in the script. The tool also visualizes the traffic rail graph, the cars and the traffic lights state. The traffic simulation can be stepped through directly in the unity editor, which eliminates the need to wait for unity to reset it's state while entering play mode. The tool can also place signs that display the name of the road at each intersection.
 
