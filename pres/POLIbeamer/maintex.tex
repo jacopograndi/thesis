@@ -1,0 +1,242 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{fontenc}
+\usepackage{graphicx}
+\graphicspath{ {./"gimp imgs"} }
+
+\usetheme{POLIbeamer}
+
+
+% Title Page
+\title{\textsc{Fast Communication Learning Through Asymmerical Multiplayer Videogames} }
+\date{21/12/2021}
+\author{Jacopo Grandi}
+\supervisortext{Relatore:}
+\supervisor{Marco Gribaudo} 
+
+\begin{document}
+
+%    Title Page
+\begin{frame}
+\pagenumbering{gobble} 
+  \titlepage
+\end{frame}
+
+
+\section{Introduction}
+\begin{frame}
+\frametitle{Serious Games}
+Serious game definition:\\
+	``Any piece of software that merges a non-entertaining purpose (serious) with a videogame structure (game)''
+\end{frame}
+
+\begin{frame}
+\frametitle{Introduction}
+Design and implemetation of a videogame that trains the communication skills of the players.
+\end{frame}
+
+\begin{frame}
+\frametitle{Contents}
+	\begin{itemize}
+		\item Game Design
+		\item Level Design
+		\item Traffic Simulation
+		\item Player movement: Bycicle model
+		\item UDP Infrastructure
+		\item State Synchronization
+		\item Audio: Radio and Sounds
+		\item Tests: TDD
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Contents}
+	\begin{itemize}
+		\item Game Design
+		\item Level Design
+		\item \textbf{Traffic Simulation}
+		\item Player movement: Bycicle model
+		\item UDP Infrastructure
+		\item State Synchronization
+		\item Audio: Radio and Sounds
+		\item Tests: TDD
+	\end{itemize}
+\end{frame}
+
+\section{Game Design}
+
+\begin{frame}
+\frametitle{Game Design}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+	
+		The game is set in a city with a manhattan road layout
+		\\
+		\medskip
+		\includegraphics[height=5.0cm]{0}
+	
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+	
+		There are items scattered on the roads
+		\\
+		\medskip
+		\includegraphics[height=5.0cm]{1}
+	\end{center}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+
+		Items have to be carried to their destination
+		\\
+		\medskip
+		\includegraphics[height=5.0cm]{2}
+	
+	\end{center}
+\end{frame}
+
+\begin{frame}
+The city is filled with car traffic and it's subdivided by drawbriges.
+\end{frame}
+
+\begin{frame}
+The players are either Couriers or Radio Operators:
+	\begin{itemize}
+		\item Couriers bike through the city and carry the items
+		\item Radio Operators have a map of the city
+	\end{itemize}
+Players can communicate by an half duplex radio.
+\end{frame}
+
+\begin{frame}
+Couriers and Radio Operators have different information:
+	\begin{itemize}
+		\item The item location and destination is known by the Radio Operators
+		\item The Radio Operators don't know the location of the Couriers
+		\item The traffic levels are known to the Radio Operators
+		\item The drawbridges state (open/close) is not known by the Radio Operators
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+The players win if they can carry all items to their destination within a time limit.
+\end{frame}
+
+\section{Level Design}
+
+\begin{frame}
+\frametitle{Level Design}
+\end{frame}
+
+\begin{frame}
+	Library 3D models
+\end{frame}
+
+\begin{frame}
+	Assembled into city blocks
+\end{frame}
+
+\begin{frame}
+	Placed to form a city
+\end{frame}
+
+\begin{frame}
+	Road layout is inferred and a Road Graph is produced
+\end{frame}
+
+\begin{frame}
+	Roads are named and details are placed (street signs)
+\end{frame}
+
+\section{Traffic Simulation}
+
+\begin{frame}
+\frametitle{Traffic Simulation}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Traffic Simulation}
+	Deterministic agent based simulation. \\
+	Each car is simulated as a train following the Rail Graph
+\end{frame}
+
+\begin{frame}
+	Generation of the Rail Graph from the Road Graph	
+\end{frame}
+
+\begin{frame}
+	Traffic lights placement	
+\end{frame}
+
+\begin{frame}
+	Integration:
+
+\end{frame}
+
+\begin{frame}
+	Optimization:
+	\begin{itemize}
+		\item Collision Detection: Lookahead dictionary
+		\item Lookup Optimization on graphs and precalculation
+		\item Minimize allocations
+		\item Grid indexing
+		\item Parallelization
+		\item Stopped car linking
+	\end{itemize}
+\end{frame}
+
+\section{Bycicle Model}
+\begin{frame}
+	\frametitle{Kinematic Bycicle Model}
+\includegraphics[width=\textwidth]{bike}
+\end{frame}
+
+
+\section{UDP Infrastructure}
+\begin{frame}
+	\frametitle{UDP Infrastructure}
+UDP with reliability:
+\begin{itemize}
+	\item optional retransmission
+	\item message fragmentation
+	\item integrity check
+\end{itemize}
+\end{frame}
+
+
+\section{Synchronization}
+\begin{frame}
+	\frametitle{Synchronization}
+State sync vs Input sync \\
+Stability \\
+Extrapolation (Dead reckoning)\\
+\end{frame}
+
+\section{Audio}
+\begin{frame}
+	\frametitle{Audio}
+Half duplex communication \\
+No loopback \\
+Buffers \\
+Resampling \\
+White noise 
+Hi-pass filter \\
+\end{frame}
+
+
+\section{Testing}
+\begin{frame}
+	\frametitle{Testing}
+TDD: Test Driven Development \\
+Multiplayer testing \\
+Clumsy \\
+\end{frame}
+
+
+\end{document}
