@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.28)  11 DEC 2021 09:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.11.28)  13 DEC 2021 18:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1287,6 +1287,12 @@ e 135.
  [14
 
 ]
+<./screens/blockskyscraper.png, id=153, 805.50937pt x 301.125pt>
+File: ./screens/blockskyscraper.png Graphic file (type png)
+<use ./screens/blockskyscraper.png>
+Package pdftex.def Info: ./screens/blockskyscraper.png  used on input line 142.
+
+(pdftex.def)             Requested size: 307.28987pt x 114.87437pt.
 Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    date: 2021-12-09 13:42:47
 (epstopdf)                    size: 13500 bytes
@@ -1295,16 +1301,21 @@ Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    size: 5677 bytes
 (epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
 ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 139.
+(epstopdf)             \includegraphics on input line 142.
 Package epstopdf Info: Output file is already uptodate.
 File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 <use pageBackground-eps-converted-to.pdf>
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 139.
+e 142.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
  [15
 
-]
+ <./screens/blockskyscraper.png>]
+<./screens/map_town.png, id=160, 1074.0125pt x 604.2575pt>
+File: ./screens/map_town.png Graphic file (type png)
+<use ./screens/map_town.png>
+Package pdftex.def Info: ./screens/map_town.png  used on input line 149.
+(pdftex.def)             Requested size: 307.28987pt x 172.87903pt.
 Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    date: 2021-12-09 13:42:47
 (epstopdf)                    size: 13500 bytes
@@ -1313,16 +1324,21 @@ Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    size: 5677 bytes
 (epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
 ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 143.
+(epstopdf)             \includegraphics on input line 149.
 Package epstopdf Info: Output file is already uptodate.
 File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 <use pageBackground-eps-converted-to.pdf>
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 143.
+e 149.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
  [16
 
-]
+ <./screens/map_town.png (PNG copy)>]
+<./screens/roads.png, id=168, 1099.10625pt x 618.31pt>
+File: ./screens/roads.png Graphic file (type png)
+<use ./screens/roads.png>
+Package pdftex.def Info: ./screens/roads.png  used on input line 156.
+(pdftex.def)             Requested size: 307.28987pt x 172.86145pt.
 Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    date: 2021-12-09 13:42:47
 (epstopdf)                    size: 13500 bytes
@@ -1331,16 +1347,21 @@ Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    size: 5677 bytes
 (epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
 ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 147.
+(epstopdf)             \includegraphics on input line 156.
 Package epstopdf Info: Output file is already uptodate.
 File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 <use pageBackground-eps-converted-to.pdf>
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 147.
+e 156.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
  [17
 
-]
+ <./screens/roads.png (PNG copy)>]
+<./screens/signs.png, id=175, 1099.10625pt x 618.31pt>
+File: ./screens/signs.png Graphic file (type png)
+<use ./screens/signs.png>
+Package pdftex.def Info: ./screens/signs.png  used on input line 163.
+(pdftex.def)             Requested size: 307.28987pt x 172.86145pt.
 Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    date: 2021-12-09 13:42:47
 (epstopdf)                    size: 13500 bytes
@@ -1349,16 +1370,16 @@ Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    size: 5677 bytes
 (epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
 ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 151.
+(epstopdf)             \includegraphics on input line 163.
 Package epstopdf Info: Output file is already uptodate.
 File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 <use pageBackground-eps-converted-to.pdf>
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 151.
+e 163.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
  [18
 
-]
+ <./screens/signs.png (PNG copy)>]
 Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    date: 2021-12-09 13:42:47
 (epstopdf)                    size: 13500 bytes
@@ -1367,68 +1388,14 @@ Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    size: 5677 bytes
 (epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
 ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 155.
+(epstopdf)             \includegraphics on input line 169.
 Package epstopdf Info: Output file is already uptodate.
 File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 <use pageBackground-eps-converted-to.pdf>
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 155.
+e 169.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
  [19
-
-]
-Package epstopdf Info: Source file: <pageBackground.eps>
-(epstopdf)                    date: 2021-12-09 13:42:47
-(epstopdf)                    size: 13500 bytes
-(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-12-09 13:43:43
-(epstopdf)                    size: 5677 bytes
-(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
-ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 161.
-Package epstopdf Info: Output file is already uptodate.
-File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
-<use pageBackground-eps-converted-to.pdf>
-Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 161.
-(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
- [20
-
-]
-Package epstopdf Info: Source file: <pageBackground.eps>
-(epstopdf)                    date: 2021-12-09 13:42:47
-(epstopdf)                    size: 13500 bytes
-(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-12-09 13:43:43
-(epstopdf)                    size: 5677 bytes
-(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
-ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 167.
-Package epstopdf Info: Output file is already uptodate.
-File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
-<use pageBackground-eps-converted-to.pdf>
-Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 167.
-(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
- [21
-
-]
-Package epstopdf Info: Source file: <pageBackground.eps>
-(epstopdf)                    date: 2021-12-09 13:42:47
-(epstopdf)                    size: 13500 bytes
-(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-12-09 13:43:43
-(epstopdf)                    size: 5677 bytes
-(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
-ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 171.
-Package epstopdf Info: Output file is already uptodate.
-File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
-<use pageBackground-eps-converted-to.pdf>
-Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 171.
-(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
- [22
 
 ]
 Package epstopdf Info: Source file: <pageBackground.eps>
@@ -1446,9 +1413,14 @@ File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
 e 175.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
- [23
+ [20
 
 ]
+<./screens/rails.png, id=195, 1099.10625pt x 618.31pt>
+File: ./screens/rails.png Graphic file (type png)
+<use ./screens/rails.png>
+Package pdftex.def Info: ./screens/rails.png  used on input line 182.
+(pdftex.def)             Requested size: 307.28987pt x 172.86145pt.
 Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    date: 2021-12-09 13:42:47
 (epstopdf)                    size: 13500 bytes
@@ -1457,57 +1429,90 @@ Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    size: 5677 bytes
 (epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
 ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 180.
+(epstopdf)             \includegraphics on input line 182.
 Package epstopdf Info: Output file is already uptodate.
 File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 <use pageBackground-eps-converted-to.pdf>
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 180.
+e 182.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+ [21
+
+ <./screens/rails.png (PNG copy)>]
+<./screens/4lane.png, id=202, 371.88937pt x 189.70876pt>
+File: ./screens/4lane.png Graphic file (type png)
+<use ./screens/4lane.png>
+Package pdftex.def Info: ./screens/4lane.png  used on input line 189.
+(pdftex.def)             Requested size: 307.28987pt x 156.76059pt.
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 189.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 189.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+ [22
+
+ <./screens/4lane.png>]
+<./screens/48lane.png, id=210, 371.88937pt x 251.43938pt>
+File: ./screens/48lane.png Graphic file (type png)
+<use ./screens/48lane.png>
+Package pdftex.def Info: ./screens/48lane.png  used on input line 196.
+(pdftex.def)             Requested size: 307.28987pt x 207.76999pt.
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 196.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 196.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+ [23
+
+ <./screens/48lane.png>]
+<./screens/8lane.png, id=218, 429.85594pt x 248.42813pt>
+File: ./screens/8lane.png Graphic file (type png)
+<use ./screens/8lane.png>
+Package pdftex.def Info: ./screens/8lane.png  used on input line 203.
+(pdftex.def)             Requested size: 307.28987pt x 177.59444pt.
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 203.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 203.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
  [24
 
-]
-Package epstopdf Info: Source file: <pageBackground.eps>
-(epstopdf)                    date: 2021-12-09 13:42:47
-(epstopdf)                    size: 13500 bytes
-(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-12-09 13:43:43
-(epstopdf)                    size: 5677 bytes
-(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
-ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 192.
-Package epstopdf Info: Output file is already uptodate.
-File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
-<use pageBackground-eps-converted-to.pdf>
-Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 192.
-(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
- [25
-
-]
-<./gimp imgs/bike.png, id=222, 298.86656pt x 158.09062pt>
-File: ./gimp imgs/bike.png Graphic file (type png)
-<use ./gimp imgs/bike.png>
-Package pdftex.def Info: ./gimp imgs/bike.png  used on input line 198.
-(pdftex.def)             Requested size: 307.28987pt x 162.55774pt.
-Package epstopdf Info: Source file: <pageBackground.eps>
-(epstopdf)                    date: 2021-12-09 13:42:47
-(epstopdf)                    size: 13500 bytes
-(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
-(epstopdf)                    date: 2021-12-09 13:43:43
-(epstopdf)                    size: 5677 bytes
-(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
-ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 198.
-Package epstopdf Info: Output file is already uptodate.
-File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
-<use pageBackground-eps-converted-to.pdf>
-Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 198.
-(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
- [26
-
- <./gimp imgs/bike.png>]
+ <./screens/8lane.png>]
+<./screens/lights.png, id=226, 1099.10625pt x 618.31pt>
+File: ./screens/lights.png Graphic file (type png)
+<use ./screens/lights.png>
+Package pdftex.def Info: ./screens/lights.png  used on input line 210.
+(pdftex.def)             Requested size: 307.28987pt x 172.86145pt.
 Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    date: 2021-12-09 13:42:47
 (epstopdf)                    size: 13500 bytes
@@ -1523,6 +1528,42 @@ File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
 e 210.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+ [25
+
+ <./screens/lights.png (PNG copy)>]
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 222.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 222.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+ [26
+
+]
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 231.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 231.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
  [27
 
 ]
@@ -1534,12 +1575,12 @@ Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    size: 5677 bytes
 (epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
 ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 219.
+(epstopdf)             \includegraphics on input line 240.
 Package epstopdf Info: Output file is already uptodate.
 File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 <use pageBackground-eps-converted-to.pdf>
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 219.
+e 240.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
  [28
 
@@ -1552,12 +1593,12 @@ Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    size: 5677 bytes
 (epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
 ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 230.
+(epstopdf)             \includegraphics on input line 244.
 Package epstopdf Info: Output file is already uptodate.
 File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 <use pageBackground-eps-converted-to.pdf>
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 230.
+e 244.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
  [29
 
@@ -1570,14 +1611,128 @@ Package epstopdf Info: Source file: <pageBackground.eps>
 (epstopdf)                    size: 5677 bytes
 (epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
 ed-to.pdf pageBackground.eps>
-(epstopdf)             \includegraphics on input line 239.
+(epstopdf)             \includegraphics on input line 253.
 Package epstopdf Info: Output file is already uptodate.
 File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
 <use pageBackground-eps-converted-to.pdf>
 Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
-e 239.
+e 253.
 (pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
  [30
+
+]
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 257.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 257.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+ [31
+
+]
+<./gimp imgs/hd.png, id=272, 1017.8025pt x 505.89pt>
+File: ./gimp imgs/hd.png Graphic file (type png)
+<use ./gimp imgs/hd.png>
+Package pdftex.def Info: ./gimp imgs/hd.png  used on input line 263.
+(pdftex.def)             Requested size: 307.28987pt x 152.73306pt.
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 263.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 263.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+ [32
+
+ <./gimp imgs/hd.png>]
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 275.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 275.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+
+[33
+
+]
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 287.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 287.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+ [34
+
+]
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 301.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 301.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+ [35
+
+]
+Package epstopdf Info: Source file: <pageBackground.eps>
+(epstopdf)                    date: 2021-12-09 13:42:47
+(epstopdf)                    size: 13500 bytes
+(epstopdf)             Output file: <pageBackground-eps-converted-to.pdf>
+(epstopdf)                    date: 2021-12-09 13:43:43
+(epstopdf)                    size: 5677 bytes
+(epstopdf)             Command: <repstopdf --outfile=pageBackground-eps-convert
+ed-to.pdf pageBackground.eps>
+(epstopdf)             \includegraphics on input line 311.
+Package epstopdf Info: Output file is already uptodate.
+File: pageBackground-eps-converted-to.pdf Graphic file (type pdf)
+<use pageBackground-eps-converted-to.pdf>
+Package pdftex.def Info: pageBackground-eps-converted-to.pdf  used on input lin
+e 311.
+(pdftex.def)             Requested size: 364.19536pt x 273.65147pt.
+ [36
 
 ]
 \tf@nav=\write6
@@ -1594,10 +1749,10 @@ Package rerunfilecheck Info: File `maintex.out' has not changed.
 (rerunfilecheck)             Checksum: 6E8116A2D3FED256DE1CD0DBCB41BFE0;957.
  ) 
 Here is how much of TeX's memory you used:
- 23770 strings out of 478994
- 447002 string characters out of 5864750
- 727891 words of memory out of 5000000
- 40665 multiletter control sequences out of 15000+600000
+ 23880 strings out of 478994
+ 448819 string characters out of 5864750
+ 727905 words of memory out of 5000000
+ 40740 multiletter control sequences out of 15000+600000
  411437 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,12n,132p,438b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1607,10 +1762,10 @@ nts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
 cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb>
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on maintex.pdf (30 pages, 183223 bytes).
+Output written on maintex.pdf (36 pages, 2387625 bytes).
 PDF statistics:
- 295 PDF objects out of 1000 (max. 8388607)
- 238 compressed objects within 3 object streams
- 70 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 350 PDF objects out of 1000 (max. 8388607)
+ 274 compressed objects within 3 object streams
+ 82 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 

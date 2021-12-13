@@ -137,7 +137,7 @@ The players win if they can carry all items to their destination within a time l
 \begin{frame}
 	\begin{center}
 	From a library of assorted 3d Models to assembled city blocks
-	\includegraphics[width=\textwidth]{blockresidential}
+	\includegraphics[width=\textwidth]{blockskyscraper}
 	\end{center}
 \end{frame}
 
@@ -210,27 +210,56 @@ The players win if they can carry all items to their destination within a time l
 \end{frame}
 
 \begin{frame}
-	Integration: TODO
-
+Car:
+\begin{itemize}
+	\item edge (Rail Graph)
+	\item relative position
+	\item velocity
+	\item seed (acceleration, turn direction)
+	\item absolute position calculated from edge and relative position
+	\item direction (angle) calculated from edge and relative position
+\end{itemize}
 \end{frame}
 
 \begin{frame}
-	Optimization:
+Integration:
+\begin{itemize}
+	\item The simulation is integrated every 100ms
+	\item It moves the cars three times and store the positions
+	\item If a car is intersecting one of the other positions its not moved; otherwise, it is
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	Minimizing allocations and access:
 	\begin{itemize}
-		\item Collision Detection: Lookahead dictionary
-		\item Lookup Optimization on graphs and precalculation
-		\item Minimize allocations
+		\item Mutable hashtables to get close to constant lookup time
+		\item Indexes to lookup on graphs in constant time
+		\item Precalculation of graph node stars and future car positions
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	The collision detection is the simulation bottleneck. The bruteforcing approach takes \begin{math} n^2 \end{math} checks, with \begin{math} n \end{math} being the number of cars.  \\
+\end{frame}
+
+
+\begin{frame}
+	Reducing the cars neighbors:
+	\begin{itemize}
 		\item Grid indexing
-		\item Parallelization
 		\item Stopped car linking
 	\end{itemize}
 \end{frame}
 
+\begin{frame}
+	The collision detection and graph navigation is parallelized.
+\end{frame}
+
 \section{Bycicle Model}
 \begin{frame}
-	REDO GRAPICS TODO
 	\frametitle{Kinematic Bycicle Model}
-\includegraphics[width=\textwidth]{bike}
+\includegraphics[width=\textwidth]{hd}
 \end{frame}
 
 
@@ -249,29 +278,36 @@ UDP with reliability:
 \section{Synchronization}
 \begin{frame}
 	\frametitle{Synchronization}
-State sync vs Input sync \\
-Stability \\
-Extrapolation (Dead reckoning)\\
+\begin{itemize}
+	\item State synchronization 
+	\item Stability 
+	\item Interpolation (Traffic simulation)
+	\item Extrapolation (Player characters)
+\end{itemize}
 \end{frame}
 
 \section{Audio}
 \begin{frame}
 	\frametitle{Audio}
-Half duplex communication \\
-No loopback \\
-Buffers \\
-Resampling \\
-White noise 
-Hi-pass filter \\
+	\begin{itemize}
+		\item Half duplex radio over UDP
+		\item No loopback 
+		\item Resampling 
+		\item White noise 
+		\item Hi-pass filter
+		\item Traffic sound effect
+		\item Bycicle sound effects 
+	\end{itemize}
 \end{frame}
 
 
 \section{Testing}
 \begin{frame}
 	\frametitle{Testing}
-TDD: Test Driven Development \\
-Multiplayer testing \\
-Clumsy \\
+	\begin{itemize}
+\item Unit testing: TDD (Test Driven Development)
+\item Integration testing: Multiplayer testing 
+	\end{itemize}
 \end{frame}
 
 
